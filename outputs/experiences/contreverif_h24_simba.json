@@ -1,0 +1,112 @@
+{
+  "experiment": "contre-verification H24 \u2014 retrait SIMBA 158f vs 170f",
+  "reference_originale": "ADR-061 (chiffre sur test H25, dataset daf936c8 : dBAS +0.0010 / dHAUT +0.0415 / dGLOBAL +0.0072)",
+  "dataset": {
+    "file": "data/processed/ml_dataset.parquet",
+    "sha256_8": "ba493568",
+    "md5_8": "827d91e7"
+  },
+  "dispositif": {
+    "train_annees": [
+      "H22 (hors Gilamont 8501260)",
+      "H23"
+    ],
+    "test_annee": "H24",
+    "n_train": 465573,
+    "n_test_h24": 335709,
+    "n_test_bas": 251106,
+    "n_test_haut": 84603,
+    "n_surch63_test": {
+      "bas": 9579,
+      "haut": 655,
+      "global": 10234
+    },
+    "simba_nan_moyen_test_h24": 0.044041118945277014
+  },
+  "seuil_surcharge": 63,
+  "seed": 42,
+  "hyperparameters": {
+    "n_estimators": 300,
+    "max_depth": 6,
+    "learning_rate": 0.1,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "objective": "reg:squarederror",
+    "tree_method": "hist",
+    "random_state": 42,
+    "enable_categorical": true,
+    "verbosity": 0
+  },
+  "simba_features_removed": [
+    "simba_part_ga",
+    "simba_part_mobilis",
+    "simba_part_billet_hta",
+    "simba_part_spar",
+    "simba_part_jeunes",
+    "simba_part_abonnement",
+    "simba_part_militaire",
+    "simba_part_autre",
+    "simba_part_corresp_amont",
+    "simba_part_corresp_aval",
+    "simba_part_premiere_classe",
+    "simba_part_intra_r35"
+  ],
+  "metrics_170f": {
+    "bas": {
+      "n_obs": 251106,
+      "n_surch": 9579,
+      "r2": 0.5888514227179213,
+      "mae": 7.891001862157537,
+      "r2_ci_lo": 0.5858776548015703,
+      "r2_ci_hi": 0.5915301135188022
+    },
+    "haut": {
+      "n_obs": 84603,
+      "n_surch": 655,
+      "r2": 0.4634070659166746,
+      "mae": 4.9360962520525,
+      "r2_ci_lo": 0.45322204847602,
+      "r2_ci_hi": 0.4729747120661631
+    },
+    "global": {
+      "n_obs": 335709,
+      "n_surch": 10234,
+      "r2": 0.6322950409951218,
+      "mae": 7.146327518211689,
+      "r2_ci_lo": 0.6295719869788169,
+      "r2_ci_hi": 0.6350814329612956
+    }
+  },
+  "metrics_158f": {
+    "bas": {
+      "n_obs": 251106,
+      "n_surch": 9579,
+      "r2": 0.6170304816181136,
+      "mae": 7.506187283446403,
+      "r2_ci_lo": 0.6141761988124493,
+      "r2_ci_hi": 0.6197982925602267
+    },
+    "haut": {
+      "n_obs": 84603,
+      "n_surch": 655,
+      "r2": 0.5101461756476031,
+      "mae": 4.775893699563974,
+      "r2_ci_lo": 0.5009649373630847,
+      "r2_ci_hi": 0.5187174849512112
+    },
+    "global": {
+      "n_obs": 335709,
+      "n_surch": 10234,
+      "r2": 0.6586008754969208,
+      "mae": 6.8181180685096425,
+      "r2_ci_lo": 0.6561327982480578,
+      "r2_ci_hi": 0.6612009219298105
+    }
+  },
+  "delta_r2_158f_vs_170f": {
+    "bas": 0.028179058900192233,
+    "haut": 0.04673910973092854,
+    "global": 0.02630583450179902
+  },
+  "created_at": "2026-07-16T13:20:16"
+}

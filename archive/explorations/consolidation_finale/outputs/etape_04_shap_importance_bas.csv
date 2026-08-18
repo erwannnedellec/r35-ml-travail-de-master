@@ -1,0 +1,180 @@
+feature,mean_abs_shap,source,rank
+histo_voyageurs_total_win7_mean,3.2897043,Historique (histo_),1
+spatial_gare_arrivee_ordre,2.8199854,Topologie (spatial_),2
+histo_voyageurs_2eme_classe_win7_mean,1.9081713,Historique (histo_),3
+spatial_gare_depart_ordre,1.4080064,Topologie (spatial_),4
+vmcv_n_lignes_concurrentes,1.2205801,VMCV embarquement (vmcv_),5
+event_is_vacances_vaud,0.91560346,Evenements (event_),6
+histo_voyageurs_total_win7_median,0.89947903,Historique (histo_),7
+cal_type_jour,0.8480657,Calendrier (cal_),8
+cal_annee_civile,0.7665734,Calendrier (cal_),9
+cal_depart_minute_du_jour,0.7343244,Calendrier (cal_),10
+histo_voyageurs_total_lag2,0.60755974,Historique (histo_),11
+resa_pax_2c_J_minus_1,0.5994417,Reservations (resa_),12
+cal_jour_semaine,0.5728873,Calendrier (cal_),13
+cal_minute_arrivee,0.48797265,Calendrier (cal_),14
+cal_minute_depart,0.4872322,Calendrier (cal_),15
+ist_headway_avant_min,0.43585864,ISTDATEN J-1 (ist_),16
+ist_headway_apres_min,0.43143785,ISTDATEN J-1 (ist_),17
+cal_arrivee_minute_du_jour,0.42604557,Calendrier (cal_),18
+histo_voyageurs_2eme_classe_win7_median,0.42540056,Historique (histo_),19
+meteo_temperature_max_j,0.39770105,Meteo (meteo_),20
+cal_mois_horaire,0.37926215,Calendrier (cal_),21
+meteo_ensol_total_j,0.36695352,Meteo (meteo_),22
+meteo_ensol_total_j_plus_1,0.28296503,Meteo (meteo_),23
+cal_mois,0.25461185,Calendrier (cal_),24
+cal_heure_depart,0.25326273,Calendrier (cal_),25
+simba_part_autre,0.24979542,SIMBA FQkal (simba_),26
+histo_voyageurs_total_win7_max,0.24666648,Historique (histo_),27
+ist_corresp_in_n_garanties_moy_20occ,0.24443942,ISTDATEN J-1 (ist_),28
+histo_voyageurs_2eme_classe_win7_std,0.23072511,Historique (histo_),29
+meteo_rayon_global_moy_j,0.21892297,Meteo (meteo_),30
+spatial_distance_km,0.20908757,Topologie (spatial_),31
+meteo_ensol_total_j_moins_1,0.19420256,Meteo (meteo_),32
+histo_voyageurs_2eme_classe_win7_max,0.19336644,Historique (histo_),33
+spatial_gare_arrivee_part_menages_1p,0.19175583,Topologie (spatial_),34
+simba_part_jeunes,0.18775946,SIMBA FQkal (simba_),35
+simba_part_corresp_amont,0.18615624,SIMBA FQkal (simba_),36
+simba_part_billet_hta,0.18196683,SIMBA FQkal (simba_),37
+histo_voyageurs_2eme_classe_lag2,0.1788915,Historique (histo_),38
+ist_profil_train_retard_arr_troncon_mean_20occ,0.17490037,ISTDATEN J-1 (ist_),39
+histo_voyageurs_1ere_classe_win7_median,0.17271979,Historique (histo_),40
+ist_corresp_in_n_theoriques_moy_20occ,0.17039882,ISTDATEN J-1 (ist_),41
+histo_voyageurs_total_win7_std,0.16494252,Historique (histo_),42
+cal_jour,0.16425787,Calendrier (cal_),43
+meteo_destination_ensoleillement_min_h,0.161005,Meteo (meteo_),44
+meteo_temperature_h,0.15852003,Meteo (meteo_),45
+simba_part_premiere_classe,0.1565736,SIMBA FQkal (simba_),46
+simba_part_intra_r35,0.15129489,SIMBA FQkal (simba_),47
+meteo_destination_temperature_h,0.14909564,Meteo (meteo_),48
+cal_heure_arrivee,0.14655764,Calendrier (cal_),49
+meteo_ensoleillement_min_h,0.14449936,Meteo (meteo_),50
+vmcv_delta_frequence_h,0.13494295,VMCV embarquement (vmcv_),51
+meteo_destination_rayon_global_moy_j,0.12938182,Meteo (meteo_),52
+simba_part_spar,0.12323095,SIMBA FQkal (simba_),53
+vmcv_delta_attente_min,0.12260682,VMCV embarquement (vmcv_),54
+simba_part_mobilis,0.12164197,SIMBA FQkal (simba_),55
+resa_max_groupe_2c_J_minus_1,0.12114548,Reservations (resa_),56
+cal_jour_semaine_iso,0.11706022,Calendrier (cal_),57
+meteo_vent_max_j,0.1129162,Meteo (meteo_),58
+event_is_manifestation_riviera,0.10919755,Evenements (event_),59
+meteo_destination_temperature_max_j,0.107284255,Meteo (meteo_),60
+meteo_destination_ensol_total_j,0.103811294,Meteo (meteo_),61
+histo_voyageurs_1ere_classe_lag2,0.09673535,Historique (histo_),62
+event_n_manifestations_blonay_j,0.095724255,Evenements (event_),63
+histo_voyageurs_1ere_classe_win7_mean,0.09097463,Historique (histo_),64
+vmcv_min_attente_min,0.08832681,VMCV embarquement (vmcv_),65
+meteo_destination_vent_max_h,0.08810594,Meteo (meteo_),66
+event_n_manifestations_riviera,0.08598605,Evenements (event_),67
+meteo_precip_total_j_moins_1,0.08508548,Meteo (meteo_),68
+meteo_destination_precip_total_j,0.08277264,Meteo (meteo_),69
+spatial_gare_depart_part_pop_65_plus,0.080863096,Topologie (spatial_),70
+simba_part_ga,0.07859927,SIMBA FQkal (simba_),71
+ist_profil_train_retard_dep_troncon_mean_20occ,0.076401524,ISTDATEN J-1 (ist_),72
+event_covid_phase,0.07589083,Evenements (event_),73
+ist_profil_train_retard_dep_troncon_std_20occ,0.07334622,ISTDATEN J-1 (ist_),74
+meteo_destination_ensol_total_j_plus_1,0.072497,Meteo (meteo_),75
+ist_corresp_in_pct_garanties_20occ,0.07209744,ISTDATEN J-1 (ist_),76
+ist_profil_train_retard_arr_troncon_mean_5occ,0.06974846,ISTDATEN J-1 (ist_),77
+ist_corresp_out_n_theoriques_moy_20occ,0.06713517,ISTDATEN J-1 (ist_),78
+simba_part_militaire,0.062112894,SIMBA FQkal (simba_),79
+simba_part_corresp_aval,0.061419953,SIMBA FQkal (simba_),80
+meteo_destination_ensol_total_j_moins_1,0.060741663,Meteo (meteo_),81
+event_n_manifestations_st_legier_j,0.058630235,Evenements (event_),82
+meteo_vent_max_h,0.058262035,Meteo (meteo_),83
+spatial_gare_arrivee_part_pop_80_plus,0.05791786,Topologie (spatial_),84
+resa_n_dossiers_J_minus_1,0.057788245,Reservations (resa_),85
+histo_voyageurs_1ere_classe_win7_std,0.05602755,Historique (histo_),86
+ist_profil_train_retard_dep_troncon_mean_5occ,0.055922434,ISTDATEN J-1 (ist_),87
+simba_part_abonnement,0.055695068,SIMBA FQkal (simba_),88
+meteo_precip_total_j_plus_1,0.05287823,Meteo (meteo_),89
+histo_voyageurs_1ere_classe_win7_max,0.052547306,Historique (histo_),90
+ist_corresp_out_n_garanties_moy_20occ,0.052185882,ISTDATEN J-1 (ist_),91
+ist_corresp_in_n_theoriques_moy_5occ,0.050163127,ISTDATEN J-1 (ist_),92
+spatial_gare_arrivee_part_pop_nee_etranger,0.047306158,Topologie (spatial_),93
+event_is_montreux_jazz,0.046691835,Evenements (event_),94
+meteo_destination_vent_max_j,0.04661016,Meteo (meteo_),95
+meteo_precip_total_j,0.04168261,Meteo (meteo_),96
+ist_corresp_out_pct_garanties_5occ,0.0413909,ISTDATEN J-1 (ist_),97
+ist_corresp_in_n_garanties_moy_5occ,0.041255273,ISTDATEN J-1 (ist_),98
+event_is_vacances_ou_ferie_vaud,0.038019333,Evenements (event_),99
+ist_profil_train_retard_arr_troncon_std_20occ,0.03431928,ISTDATEN J-1 (ist_),100
+meteo_destination_precip_total_j_plus_1,0.034289654,Meteo (meteo_),101
+event_is_ski_ouvert,0.03343539,Evenements (event_),102
+event_n_manifestations_zone_directe_j,0.033286355,Evenements (event_),103
+event_is_saison_narcisses,0.031884525,Evenements (event_),104
+spatial_gare_depart_part_menages_1p,0.031725973,Topologie (spatial_),105
+ist_corresp_out_pct_garanties_20occ,0.031204658,ISTDATEN J-1 (ist_),106
+meteo_destination_precip_total_j_moins_1,0.030843511,Meteo (meteo_),107
+event_n_manifestations_zone_indirecte_j,0.030812457,Evenements (event_),108
+spatial_gare_depart_part_pop_0_14_ans,0.030431954,Topologie (spatial_),109
+spatial_gare_arrivee_part_pop_65_plus,0.029108364,Topologie (spatial_),110
+ist_profil_train_pct_en_retard_dep_troncon_20occ,0.026443593,ISTDATEN J-1 (ist_),111
+ist_profil_train_retard_arr_troncon_std_5occ,0.026125059,ISTDATEN J-1 (ist_),112
+ist_corresp_out_n_theoriques_moy_5occ,0.025336316,ISTDATEN J-1 (ist_),113
+spatial_gare_depart_pop_500m_total,0.022325188,Topologie (spatial_),114
+spatial_gare_arrivee_indice_stabilite_resid,0.021291785,Topologie (spatial_),115
+spatial_gare_arrivee_part_pop_25_64_ans,0.020981926,Topologie (spatial_),116
+cal_type_jour_3classes,0.019992607,Calendrier (cal_),117
+event_narcisses_source,0.019530876,Evenements (event_),118
+spatial_gare_arrivee_pop_500m_total,0.019336421,Topologie (spatial_),119
+event_is_covid_restrictions,0.01910807,Evenements (event_),120
+spatial_gare_depart_pop_par_menage_500m,0.01909046,Topologie (spatial_),121
+ist_profil_train_retard_dep_troncon_std_5occ,0.018966831,ISTDATEN J-1 (ist_),122
+event_is_ferie_vaud,0.018961338,Evenements (event_),123
+meteo_precipitation_mm_h,0.018874062,Meteo (meteo_),124
+ist_corresp_out_n_garanties_moy_5occ,0.018201882,ISTDATEN J-1 (ist_),125
+spatial_gare_arrivee_hpi_ha_classe_1,0.017047036,Topologie (spatial_),126
+event_n_manifestations_hors_zone_j,0.016783837,Evenements (event_),127
+meteo_destination_precipitation_mm_h,0.016636409,Meteo (meteo_),128
+base_duree_troncon_minutes,0.016493522,Base (base_),129
+spatial_gare_arrivee_part_pop_15_24_ans,0.01573461,Topologie (spatial_),130
+spatial_gare_arrivee_menages_500m_total,0.015514509,Topologie (spatial_),131
+spatial_gare_depart_part_pop_80_plus,0.015505967,Topologie (spatial_),132
+spatial_gare_depart_menages_500m_total,0.014817953,Topologie (spatial_),133
+ist_profil_train_pct_en_retard_arr_troncon_20occ,0.014687186,ISTDATEN J-1 (ist_),134
+spatial_gare_arrivee_part_hpi_non_plausible,0.013231981,Topologie (spatial_),135
+ist_corresp_in_pct_garanties_5occ,0.011657849,ISTDATEN J-1 (ist_),136
+spatial_gare_depart_hpi_ha_classe_1,0.010245653,Topologie (spatial_),137
+event_n_manifestations_vevey_j,0.009460461,Evenements (event_),138
+spatial_gare_arrivee_part_grands_menages_4p,0.008025284,Topologie (spatial_),139
+event_is_marche_noel,0.0067388914,Evenements (event_),140
+resa_part_scolaire_J_minus_1,0.0065175896,Reservations (resa_),141
+spatial_gare_arrivee_pop_par_menage_500m,0.006494074,Topologie (spatial_),142
+spatial_gare_arrivee_indice_mobilite_resid,0.006383683,Topologie (spatial_),143
+spatial_gare_arrivee_part_pop_etrangere,0.0062753237,Topologie (spatial_),144
+spatial_gare_depart_part_pop_15_24_ans,0.006126007,Topologie (spatial_),145
+ist_profil_train_pct_en_retard_dep_troncon_5occ,0.0060846424,ISTDATEN J-1 (ist_),146
+spatial_gare_depart_part_pop_25_64_ans,0.006047643,Topologie (spatial_),147
+spatial_gare_depart_part_grands_menages_4p,0.0048397095,Topologie (spatial_),148
+spatial_gare_depart_part_hpi_non_plausible,0.0040379604,Topologie (spatial_),149
+spatial_gare_depart_part_nouveaux_arrivants_1an,0.0037149172,Topologie (spatial_),150
+spatial_gare_depart_indice_stabilite_resid,0.0034592103,Topologie (spatial_),151
+ist_headway_apres_is_last_of_day,0.0024782452,ISTDATEN J-1 (ist_),152
+spatial_gare_arrivee_part_pop_0_14_ans,0.002457149,Topologie (spatial_),153
+ist_profil_train_pct_en_retard_arr_troncon_5occ,0.0022613571,ISTDATEN J-1 (ist_),154
+event_ski_source,0.0017519626,Evenements (event_),155
+ist_headway_avant_is_first_of_day,0.0017175213,ISTDATEN J-1 (ist_),156
+event_is_montreux_noel,0.0015779911,Evenements (event_),157
+spatial_gare_depart_indice_mobilite_resid,0.0013861357,Topologie (spatial_),158
+histo_voyageurs_2eme_classe_win7_n_surcharges,0.0013762359,Historique (histo_),159
+spatial_gare_arrivee_part_nouveaux_arrivants_1an,0.001278172,Topologie (spatial_),160
+spatial_gare_depart_part_pop_etrangere,0.0012417228,Topologie (spatial_),161
+resa_part_tour_operator_J_minus_1,0.001002258,Reservations (resa_),162
+meteo_neige_binaire_h,0.00081036787,Meteo (meteo_),163
+spatial_gare_depart_hpi_ha_classe_2,0.00038333138,Topologie (spatial_),164
+spatial_gare_depart_part_pop_nee_etranger,0.00036233437,Topologie (spatial_),165
+resa_n_langues_distinctes_J_minus_1,0.00034954463,Reservations (resa_),166
+spatial_gare_arrivee_hpi_ha_classe_2,0.00019142439,Topologie (spatial_),167
+resa_n_pays_distincts_J_minus_1,4.9971204e-05,Reservations (resa_),168
+spatial_gare_arrivee_hpi_ha_autre,9.475172e-06,Topologie (spatial_),169
+cal_is_weekend,7.768407e-06,Calendrier (cal_),170
+spatial_gare_depart_hpi_ha_autre,0.0,Topologie (spatial_),171
+spatial_gare_depart_hpi_ha_manquante,0.0,Topologie (spatial_),172
+spatial_gare_depart_flag_qualite_faible,0.0,Topologie (spatial_),173
+spatial_gare_depart_hpi_classe_max,0.0,Topologie (spatial_),174
+spatial_gare_arrivee_hpi_classe_max,0.0,Topologie (spatial_),175
+spatial_segment,0.0,Topologie (spatial_),176
+spatial_gare_arrivee_hpi_ha_manquante,0.0,Topologie (spatial_),177
+spatial_gare_arrivee_flag_qualite_faible,0.0,Topologie (spatial_),178
+resa_has_resa_J_minus_1,0.0,Reservations (resa_),179

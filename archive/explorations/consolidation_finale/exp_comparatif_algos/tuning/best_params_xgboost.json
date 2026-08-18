@@ -1,0 +1,34 @@
+{
+  "algo": "xgboost",
+  "n_trials": 40,
+  "seed": 42,
+  "best_cv_rmse_mean": 10.55055492508985,
+  "cv_rmse_folds": [
+    11.511123108286371,
+    10.468398929082088,
+    9.67214273790109
+  ],
+  "cv_rmse_std": 0.7530048279728432,
+  "best_params": {
+    "learning_rate": 0.020659493394770433,
+    "max_depth": 8,
+    "subsample": 0.842384010009036,
+    "colsample_bytree": 0.6202919714206603,
+    "min_child_weight": 9,
+    "reg_lambda": 6.0297522514292,
+    "reg_alpha": 0.0302819373793345
+  },
+  "n_arbres_bas": 536,
+  "n_arbres_haut": 313,
+  "search_space": {
+    "learning_rate": "loguniform[0.01,0.3]",
+    "max_depth": "int[3,10]",
+    "subsample": "unif[0.6,1.0]",
+    "colsample_bytree": "unif[0.6,1.0]",
+    "min_child_weight": "int[1,10]",
+    "reg_lambda": "loguniform[1e-2,10]",
+    "reg_alpha": "loguniform[1e-3,10]",
+    "n_estimators": "<= 600 via early stopping (40)"
+  },
+  "tuning_minutes": 94.32
+}

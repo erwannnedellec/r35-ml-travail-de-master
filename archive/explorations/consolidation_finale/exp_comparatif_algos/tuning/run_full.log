@@ -1,0 +1,94 @@
+==================================================================================
+TUNING COMPARATIF Optuna — XGB/LGBM/CatBoost segmentés — 40 essais/algo — seed 42
+==================================================================================
+
+── 0. Dataset ──
+  Hash SHA256[:8] = 416bb90b ✓ (canonique intact, lecture seule)
+  1,141,984 lignes · 158 features · 6 catégorielles
+
+── 1. Split C ──
+  Train=801,282  H25=309,252 (révélé une seule fois, à la fin)
+
+── 2. Plis walk-forward (expanding, par date, train-only) ──
+  Pli 1 : train=102,832 (<= 2022-09-06)  val=211,520 (2022-09-07 -> 2023-06-29)
+  Pli 2 : train=314,352 (<= 2023-06-29)  val=246,174 (2023-06-30 -> 2024-03-22)
+  Pli 3 : train=560,526 (<= 2024-03-22)  val=240,756 (2024-03-23 -> 2024-12-14)
+
+==================================================================================
+  OPTUNA — XGBOOST  (40 essais, TPE seed 42)
+==================================================================================
+  [94.3 min] best CV-RMSE = 10.5506  (plis=['11.5111', '10.4684', '9.6721'], std=0.7530)
+  best params : {'learning_rate': 0.020659493394770433, 'max_depth': 8, 'subsample': 0.842384010009036, 'colsample_bytree': 0.6202919714206603, 'min_child_weight': 9, 'reg_lambda': 6.0297522514292, 'reg_alpha': 0.0302819373793345}
+  n_arbres refit : BAS=536  HAUT=313
+  Refit figé sur train complet (xgboost) …
+
+==================================================================================
+  OPTUNA — LIGHTGBM  (40 essais, TPE seed 42)
+==================================================================================
+  [37.2 min] best CV-RMSE = 10.4943  (plis=['11.4796', '10.3996', '9.6038'], std=0.7687)
+  best params : {'learning_rate': 0.03400520022372472, 'num_leaves': 71, 'max_depth': 11, 'subsample': 0.6316311075518078, 'colsample_bytree': 0.6000771907494752, 'min_child_samples': 49, 'reg_lambda': 0.04109881970871397, 'reg_alpha': 3.8160118172669297}
+  n_arbres refit : BAS=453  HAUT=175
+  Refit figé sur train complet (lightgbm) …
+
+==================================================================================
+  OPTUNA — CATBOOST  (40 essais, TPE seed 42)
+==================================================================================
+  [127.6 min] best CV-RMSE = 10.4928  (plis=['11.5084', '10.3874', '9.5826'], std=0.7897)
+  best params : {'learning_rate': 0.07071431642868581, 'depth': 9, 'subsample': 0.9266295296035133, 'rsm': 0.8184192040144169, 'min_data_in_leaf': 8, 'l2_leaf_reg': 2.6798537566823106, 'random_strength': 0.00517734583792423}
+  n_arbres refit : BAS=440  HAUT=276
+  Refit figé sur train complet (catboost) …
+
+==================================================================================
+  RÉVÉLATION H25 (une seule fois) — modèles figés + CF09 + baseline
+==================================================================================
+
+====================================================================================================
+TABLE DE RÉSULTATS — H25 (une seule fois), Split C, 158f, seed 42  |  RMSE = juge principal
+====================================================================================================
+
+### Segment GLOBAL
+Modèle                           RMSE       R²   PR-AUC      MAE   MAE>63  biais>63
+----------------------------------------------------------------------------------
+xgboost (Optuna seg)           11.534   0.6108   0.4564    7.578    30.17    -29.83
+lightgbm (Optuna seg)          11.459   0.6159   0.4609    7.491    28.87    -28.40
+catboost (Optuna seg)          11.400   0.6198   0.4686    7.470    29.40    -29.06
+CF09 canonique (repère)        11.674   0.6013   0.4490    7.712    29.09    -28.47
+Baseline naïve (plancher)      16.687   0.1855   0.0557   11.388    56.02    -56.02
+
+### Segment BAS
+Modèle                           RMSE       R²   PR-AUC      MAE   MAE>63  biais>63
+----------------------------------------------------------------------------------
+xgboost (Optuna seg)           11.856   0.5931   0.4788    8.117    27.85    -27.46
+lightgbm (Optuna seg)          11.747   0.6005   0.4853    8.039    26.53    -25.99
+catboost (Optuna seg)          11.744   0.6007   0.4883    8.035    27.11    -26.72
+CF09 canonique (repère)        11.947   0.5868   0.4687    8.169    27.20    -26.51
+Baseline naïve (plancher)      17.500   0.1135   0.0581   12.522    53.43    -53.43
+
+### Segment HAUT
+Modèle                           RMSE       R²   PR-AUC      MAE   MAE>63  biais>63
+----------------------------------------------------------------------------------
+xgboost (Optuna seg)           10.550   0.4639   0.3368    6.019    46.45    -46.45
+lightgbm (Optuna seg)          10.581   0.4608   0.3330    5.909    45.35    -45.35
+catboost (Optuna seg)          10.343   0.4848   0.3712    5.838    45.55    -45.54
+CF09 canonique (repère)        10.847   0.4334   0.3452    6.389    42.40    -42.27
+Baseline naïve (plancher)      14.075   0.0459   0.0251    8.110    74.21    -74.21
+
+==================================================================================
+VALIDATION (train walk-forward 3 plis) — CV-RMSE moyen ± std inter-plis
+==================================================================================
+  xgboost    CV-RMSE=10.5506  std_inter-plis=0.7530  plis=['11.5111', '10.4684', '9.6721']
+  lightgbm   CV-RMSE=10.4943  std_inter-plis=0.7687  plis=['11.4796', '10.3996', '9.6038']
+  catboost   CV-RMSE=10.4928  std_inter-plis=0.7897  plis=['11.5084', '10.3874', '9.5826']
+
+==================================================================================
+VERDICT (critère pré-posé, métrique d'arbitrage = RMSE, non modifiée a posteriori)
+==================================================================================
+  écart inter-algos CV-RMSE = 0.0577  |  variabilité inter-plis moyenne = 0.7705
+  meilleur CV = catboost  |  meilleur H25 = catboost  |  écart inter-algos H25 = 0.1341
+  => INDISCERNABLES sur le RMSE (écart inter-algos CV=0.0577 < variabilité inter-plis=0.7705). Le choix relève des critères secondaires (explicabilité, intégration Dataiku, maturité, maîtrise).
+
+  Sauvegardé → tuning_resultats.json + best_params_*.json + trials_*.csv
+
+==================================================================================
+TERMINÉ — hash 416bb90b intact. Arrêt après la table. Aucune promotion de modèle.
+==================================================================================

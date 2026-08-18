@@ -1,0 +1,91 @@
+﻿Gare_BPUIC,Gare_abreviation,Gare_nom,Gare_Gare_localityName,Gare_Ordre,Gare_Gare_km
+8501198,PALZ,Château-d'Oex La Palaz,Château-d'Oex,21,33.67
+8501200,VV,Vevey,Vevey,0,0
+8501230,GLHA,Glion-Alpes,Glion,5,3
+8501250,VVPL,Vevey (funi),Vevey,0,0
+8501251,CORX,Corseaux,Corseaux,1,0.345
+8501252,BESI,Beau-Site,Chardonne,2,0.585
+8501253,CHAJ,Chardonne-Jongny,Chardonne,3,0.998
+8501254,BAUM,La Baume,Chardonne,4,1.237
+8501255,MTPE,Mont-Pèlerin,Le Mont-Pèlerin,5,1.58
+8501260,GIL,Gilamont,Vevey,1,1.21
+8501261,CLIE,Clies,St-Légier-La Chiésaz,3,1.83
+8501262,HTV,Hauteville,St-Légier-La Chiésaz,4,2.46
+8501263,CHTV,Château-d'Hauteville,St-Légier-La Chiésaz,5,3.02
+8501264,STLV,St-Légier-Village,St-Légier-La Chiésaz,7,4.02
+8501265,CHIZ,La Chiésaz,St-Légier-La Chiésaz,8,4.51
+8501266,CHBL,Château-de-Blonay,Blonay,9,5.35
+8501280,STLE,St-Légier-Gare,St-Légier-La Chiésaz,6,3.6
+8501281,BLON,Blonay,Blonay,10,5.72
+8501282,PRLZ,Prélaz-sur-Blonay,Blonay,11,6.17
+8501283,TUS,Tusinge,Blonay,12,6.94
+8501284,CHEV,Les Chevalleyres,Blonay,13,7.35
+8501285,FAY,Fayaux,Blonay,15,8.43
+8501286,OND,Ondallaz-L'Alliaz,Blonay,16,9.17
+8501287,LAL,Lally,Blonay,17,9.81
+8501288,PLEI,Les Pléiades,Blonay,18,10.51
+8501300,MX,Montreux,Montreux,0,0
+8501301,TER,Territet,Territet,0,0
+8501308,GLCO,Glion-Collège,Glion,6,3.24
+8501351,SONL,Sonloup,Les Avants,1,0.532
+8501357,HDC,Haut-de-Caux,Caux,10,5.79
+8501360,PLCH,Montreux-Les Planches,Montreux,1,0.6
+8501361,TOV,Toveyre,Territet,2,1.67
+8501362,VALM,Valmont,Glion,3,2.15
+8501363,TREM,Le Tremblex,Glion,7,3.63
+8501364,ECTS,Les Echets,Caux,9,5.43
+8501365,CRDB,Crêt-d'y-Bau,Caux,11,6.42
+8501366,PACC,Paccot,Caux,12,7.05
+8501367,JAMA,Jaman,Caux,13,8.64
+8501368,PERC,La Perche,Caux,14,9.27
+8501369,RODN,Rochers-de-Naye,Veytaux,15,10.36
+8501370,GLI,Glion,Glion,4,2.73
+8501371,CAUX,Caux,Caux,8,4.9
+8501374,FON,Fontanivent,Brent,6,3.28
+8501375,CHER,Chernex,Chernex,7,4.29
+8501376,CABY,Chamby,Chamby,9,7.15
+8501377,AVA,Les Avants,Les Avants,11,10.85
+8501378,ALLI,Allières,Montbovon,14,16.97
+8501379,SCI,Les Sciernes,Les Sciernes-d'Albeuve,15,20.43
+8501380,CGE,Montreux-Collège,Montreux,1,0.65
+8501381,VUAR,Vuarennes,Montreux,2,1
+8501382,CHAL,Châtelard VD,Montreux,4,2.15
+8501383,PLAC,Planchamp,Clarens,5,2.66
+8501384,SONZ,Sonzier,Chernex,8,5.47
+8501385,SDY,Sendy-Sollard,Chamby,10,9.2
+8501386,JOR,Jor,Les Avants,12,12.63
+8501387,CASE,Les Cases,Montbovon,13,15.19
+8501388,COMS,Les Combes,Flendruz,23,36.13
+8501390,BEMM,Belmont-sur-Montreux,Montreux,3,1.51
+8501391,TINE,La Tine,La Tine,17,24.99
+8501392,ROSI,Rossinière,Rossinière,18,28.23
+8501393,CHAU,La Chaudanne-Les Moulins,Rossinière,19,29.38
+8501394,CHOE,Château-d'Oex,Château-d'Oex,20,32.67
+8501395,GRAC,Les Granges-Gérignoz,Château-d'Oex,22,34.545
+8501396,FLED,Flendruz,Flendruz,24,37.41
+8501397,ROU,Rougemont,Rougemont,25,39.32
+8501398,SAAN,Saanen,Saanen,26,43.36
+8501399,GST,Gstaad,Gstaad,27,45.76
+8502476,VVVI,Vevey Vignerons,Vevey,2,1.45
+8504070,MTB,Montbovon,Montbovon,16,22.14
+8507270,GRUB,Gruben,Gstaad,28,48.27
+8507271,SCR,Schönried,Schönried,29,50.85
+8507272,SAMO,Saanenmöser,Saanenmöser,30,53.06
+8507273,OES,Oeschseite,Oeschseite,31,56.89
+8507274,BLB,Blankenburg,Blankenburg,33,64.08
+8507275,STOI,Stöckli,St. Stephan,34,66.97
+8507276,STST,St. Stephan,St. Stephan,35,68.75
+8507277,MATE,Matten i.S.,Matten (St. Stephan),36,70.92
+8507278,BODE,Boden,Lenk im Simmental,37,73.74
+8507279,LENK,Lenk im Simmental,Lenk im Simmental,38,75.29
+8507290,ZW,Zweisimmen,Zweisimmen,32,62.43
+8507483,SP,Spiez,Spiez,34,9.782
+8507492,IO,Interlaken Ost,Interlaken,35,27.954
+8508010,HALN,Halten,Zweisimmen,33,59.53
+8530031,GLFU,Glion (funi),Glion,1,0.64
+8530261,BCHX,Bois-de-Chexbres,Blonay,14,7.71
+8530673,TEFU,Territet (funi),Territet,0,0
+8592618,COFU,Collonge (funi),Territet,1,0.174
+,,,,,
+"Filtres appliqués : 
+OFF_Gare_MOB est Interne",,,,,

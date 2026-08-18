@@ -1,0 +1,44 @@
+Documentation et registre de décisions — Creative Commons Attribution 4.0
+International (CC BY 4.0)
+
+Copyright (c) 2026 Erwann Nédellec
+
+Le code de ce dépôt est publié sous licence MIT (fichier LICENSE). La présente
+licence couvre les contenus rédactionnels, qui n'en relèvent pas :
+
+  README.md
+  data/README.md
+  docs/adr/**            registre des 78 décisions d'architecture (ADR)
+  docs/**/*.md           notes, synthèses et rapports de vérification
+
+Vous êtes libre de partager et d'adapter ces contenus, y compris à des fins
+commerciales, à condition de créditer l'auteur, d'indiquer si des modifications
+ont été apportées, et de fournir un lien vers la licence.
+
+Attribution suggérée
+--------------------
+
+  Nédellec, E. (2026). Prévision de la surcharge et aide à la décision de
+  renforcement sur la ligne R35 — code et registre de décisions de l'artefact.
+  Travail de master, MSc HES-SO en Business Administration, orientation
+  Management des Systèmes d'Information. Licence CC BY 4.0.
+
+Texte complet de la licence
+---------------------------
+
+  https://creativecommons.org/licenses/by/4.0/legalcode.fr
+
+Résumé lisible
+
+  https://creativecommons.org/licenses/by/4.0/deed.fr
+
+Ce qui n'est couvert par aucune des deux licences
+-------------------------------------------------
+
+Les données d'exploitation mobilisées par ce travail — comptages APC, données
+internes MOB, réservations, rotations, paramètres du système de comptage —
+appartiennent à la Compagnie du Chemin de fer Montreux Oberland bernois SA
+(MOB). Elles ne figurent pas dans ce dépôt, ne sont couvertes ni par la
+licence MIT ni par la présente licence, et aucun droit n'est conféré sur
+elles. Elles sont transmises séparément aux membres du jury pour les besoins
+de l'évaluation académique.

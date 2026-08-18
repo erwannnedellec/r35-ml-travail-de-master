@@ -1,0 +1,210 @@
+colonne,famille,source,dtype,statut,dans_158_features,reference_adr,taux_nan_pct,plage_ou_modalites,libelle_fr,unite
+id_source_file,id_,referentiels/identifiants,string,hors_matrice_tracabilite,False,,0.0,3 modalites,Identifiant : source file,
+base_date,base_,APC,datetime64[ns],hors_matrice_tracabilite,False,,0.0,1433 modalites,Date de circulation,
+horaire_annee_horaire,horaire_,horaires,string,hors_matrice_tracabilite,False,,0.0,4 modalites,Horaire : annee horaire,
+cal_annee_civile,cal_,calendrier,int16,feature_modele,True,,0.0,"[2021, 2025]",Calendrier : annee civile,
+cal_mois,cal_,calendrier,int8,feature_modele,True,,0.0,"[1, 12]",Calendrier : mois,
+cal_mois_horaire,cal_,calendrier,Int8,feature_modele,True,,0.0,"[1, 13]",Calendrier : mois horaire,
+cal_jour,cal_,calendrier,int8,feature_modele,True,,0.0,"[1, 31]",Calendrier : jour,
+cal_jour_semaine_iso,cal_,calendrier,int8,feature_modele,True,,0.0,"[1, 7]",Calendrier : jour semaine iso,
+cal_jour_semaine,cal_,calendrier,string,feature_modele,True,,0.0,7 modalites,Calendrier : jour semaine,
+cal_is_weekend,cal_,calendrier,int8,feature_modele,True,,0.0,"[0, 1]",Week-end,indicatrice
+event_is_vacances_vaud,event_,calendriers/evenements,int8,feature_modele,True,,0.0,"[0, 1]",Vacances scolaires vaudoises,indicatrice
+event_is_ferie_vaud,event_,calendriers/evenements,int8,feature_modele,True,,0.0,"[0, 1]",Jour férié vaudois,indicatrice
+event_is_vacances_ou_ferie_vaud,event_,calendriers/evenements,int8,feature_modele,True,,0.0,"[0, 1]",Événement : is vacances ou ferie vaud,indicatrice
+cal_type_jour,cal_,calendrier,string,feature_modele,True,,0.0,9 modalites,Type de jour,
+cal_type_jour_3classes,cal_,calendrier,string,feature_modele,True,,0.0,3 modalites,Type de jour (3 classes),
+horaire_numero_train,horaire_,horaires,Int64,hors_matrice_tracabilite,False,,0.0,"[1300, 1553]",Horaire : numero train,
+base_sens,base_,APC,object,hors_matrice_tracabilite,False,,0.0,2 modalites,Sens de circulation,
+id_gare_depart,id_,referentiels/identifiants,object,hors_matrice_tracabilite,False,,0.0,18 modalites,Identifiant : gare de départ,
+id_gare_arrivee,id_,referentiels/identifiants,object,hors_matrice_tracabilite,False,,0.0,18 modalites,Identifiant : gare d'arrivée,
+base_offre_1ere_classe,base_,APC,Int16,hors_matrice_tracabilite,False,,0.0,"[0, 36]",Desserte : offre 1re classe,
+base_offre_2eme_classe,base_,APC,Int16,hors_matrice_tracabilite,False,,0.0,"[78, 280]",Desserte : offre 2e classe,
+target_voyageurs_1ere_classe,target_,APC,Int16,cible_alternative,False,,0.0,"[0, 27]",Charge de 1re classe,voyageurs
+target_voyageurs_2eme_classe,target_,APC,Int16,cible,False,,0.0,"[0, 206]",Charge de 2e classe,voyageurs
+base_depart_datetime,base_,APC,datetime64[ns],hors_matrice_tracabilite,False,,0.0,877012 modalites,Desserte : depart datetime,proportion
+cal_heure_depart,cal_,calendrier,Int16,feature_modele,True,,0.0,"[0, 23]",Calendrier : heure depart,
+cal_minute_depart,cal_,calendrier,Int16,feature_modele,True,,0.0,"[0, 59]",Calendrier : minute depart,
+base_arrivee_datetime,base_,APC,datetime64[ns],hors_matrice_tracabilite,False,,0.0,883663 modalites,Desserte : arrivee datetime,
+cal_heure_arrivee,cal_,calendrier,Int16,feature_modele,True,,0.0,"[0, 23]",Calendrier : heure arrivee,
+cal_minute_arrivee,cal_,calendrier,Int16,feature_modele,True,,0.0,"[0, 59]",Calendrier : minute arrivee,
+cal_depart_minute_du_jour,cal_,calendrier,Int64,feature_modele,True,,0.0,"[0, 1438]",Calendrier : depart minute du jour,minutes
+cal_arrivee_minute_du_jour,cal_,calendrier,Int64,feature_modele,True,,0.0,"[0, 1438]",Calendrier : arrivee minute du jour,minutes
+base_duree_troncon_minutes,base_,APC,Float32,feature_modele,True,,0.0,"[0.0, 11.0]",Desserte : duree troncon minutes,
+id_gare_depart_bpuic,id_,referentiels/identifiants,Int32,hors_matrice_tracabilite,False,,0.0,"[8501200, 8530261]",Identifiant : gare de départ bpuic,proportion
+id_gare_arrivee_bpuic,id_,referentiels/identifiants,Int32,hors_matrice_tracabilite,False,,0.0,"[8501200, 8530261]",Identifiant : gare d'arrivée bpuic,
+event_is_manifestation_riviera,event_,calendriers/evenements,int8,feature_modele,True,,0.0,"[0, 1]",Événement : is manifestation riviera,indicatrice
+event_n_manifestations_riviera,event_,calendriers/evenements,Int8,feature_modele,True,,0.0,"[0, 7]",Événement : n manifestations riviera,
+event_n_manifestations_zone_directe_j,event_,calendriers/evenements,Int8,feature_modele,True,,0.0,"[0, 4]",Événement : n manifestations zone directe j,
+event_n_manifestations_zone_indirecte_j,event_,calendriers/evenements,Int8,feature_modele,True,,0.0,"[0, 3]",Événement : n manifestations zone indirecte j,
+event_n_manifestations_hors_zone_j,event_,calendriers/evenements,Int8,feature_modele,True,,0.0,"[0, 2]",Événement : n manifestations hors zone j,
+event_is_montreux_jazz,event_,calendriers/evenements,int8,feature_modele,True,,0.0,"[0, 1]",Événement : is montreux jazz,indicatrice
+event_is_marche_noel,event_,calendriers/evenements,int8,feature_modele,True,,0.0,"[0, 1]",Événement : is marche noel,indicatrice
+event_is_montreux_noel,event_,calendriers/evenements,int8,feature_modele,True,,0.0,"[0, 1]",Événement : is montreux noel,indicatrice
+event_n_manifestations_vevey_j,event_,calendriers/evenements,Int8,feature_modele,True,,0.0,"[0, 3]",Événement : n manifestations vevey j,
+event_n_manifestations_st_legier_j,event_,calendriers/evenements,Int8,feature_modele,True,,0.0,"[0, 1]",Événement : n manifestations st legier j,
+event_n_manifestations_blonay_j,event_,calendriers/evenements,Int8,feature_modele,True,,0.0,"[0, 1]",Événement : n manifestations blonay j,
+event_is_ski_ouvert,event_,calendriers/evenements,int8,feature_modele,True,,0.0,"[0, 1]",Domaine skiable ouvert,indicatrice
+event_ski_source,event_,calendriers/evenements,string,feature_modele,True,,0.0,2 modalites,Événement : ski source,
+event_is_covid_restrictions,event_,calendriers/evenements,int8,feature_modele,True,,0.0,"[0, 1]",Événement : is covid restrictions,indicatrice
+event_covid_phase,event_,calendriers/evenements,string,feature_modele,True,,0.0,2 modalites,Événement : covid phase,
+event_is_saison_narcisses,event_,calendriers/evenements,int8,feature_modele,True,,0.0,"[0, 1]",Événement : is saison narcisses,indicatrice
+event_narcisses_source,event_,calendriers/evenements,string,feature_modele,True,,0.0,2 modalites,Événement : narcisses source,
+meteo_destination_temperature_h,meteo_,MeteoSuisse,Float32,feature_modele,True,,0.06,"[-15.199999809265137, 35.20000076293945]",Météo : destination temperature h,°C
+meteo_destination_precipitation_mm_h,meteo_,MeteoSuisse,Float32,feature_modele,True,,0.141,"[0.0, 48.900001525878906]",Météo : destination precipitation mm h,mm
+meteo_destination_ensoleillement_min_h,meteo_,MeteoSuisse,Float32,feature_modele,True,,0.0,"[0.0, 60.0]",Météo : destination ensoleillement min h,min
+meteo_destination_vent_max_h,meteo_,MeteoSuisse,Float32,feature_modele,True,,0.135,"[0.0, 109.4000015258789]",Météo : destination vent max h,km/h
+meteo_temperature_max_j,meteo_,MeteoSuisse,Float32,feature_modele,True,,0.0,"[-6.300000190734863, 35.20000076293945]",Météo : temperature max j,°C
+meteo_destination_temperature_max_j,meteo_,MeteoSuisse,Float32,feature_modele,True,,0.0,"[-6.300000190734863, 35.20000076293945]",Météo : destination temperature max j,°C
+meteo_precip_total_j,meteo_,MeteoSuisse,Float32,feature_modele,True,,0.0,"[0.0, 93.69999694824219]",Météo : precip total j,mm
+meteo_destination_precip_total_j,meteo_,MeteoSuisse,Float32,feature_modele,True,,0.0,"[0.0, 93.69999694824219]",Météo : destination precip total j,mm
+meteo_ensol_total_j,meteo_,MeteoSuisse,Float32,feature_modele,True,,0.0,"[0.0, 797.0]",Météo : ensol total j,min
+meteo_destination_ensol_total_j,meteo_,MeteoSuisse,Float32,feature_modele,True,,0.0,"[0.0, 797.0]",Météo : destination ensol total j,min
+meteo_vent_max_j,meteo_,MeteoSuisse,Float32,feature_modele,True,,0.0,"[6.5, 109.4000015258789]",Météo : vent max j,km/h
+meteo_destination_vent_max_j,meteo_,MeteoSuisse,Float32,feature_modele,True,,0.0,"[6.5, 109.4000015258789]",Météo : destination vent max j,km/h
+meteo_rayon_global_moy_j,meteo_,MeteoSuisse,Float32,feature_modele,True,,0.0,"[3.5, 375.4166564941406]",Météo : rayon global moyenne j,W/m2
+meteo_destination_rayon_global_moy_j,meteo_,MeteoSuisse,Float32,feature_modele,True,,0.0,"[3.5, 375.4166564941406]",Météo : destination rayon global moyenne j,W/m2
+meteo_precip_total_j_moins_1,meteo_,MeteoSuisse,Float32,feature_modele,True,,0.0,"[0.0, 93.69999694824219]",Météo : precip total J-1,mm
+meteo_destination_precip_total_j_moins_1,meteo_,MeteoSuisse,Float32,feature_modele,True,,0.0,"[0.0, 93.69999694824219]",Météo : destination precip total J-1,mm
+meteo_ensol_total_j_moins_1,meteo_,MeteoSuisse,Float32,feature_modele,True,,0.0,"[0.0, 797.0]",Météo : ensol total J-1,min
+meteo_destination_ensol_total_j_moins_1,meteo_,MeteoSuisse,Float32,feature_modele,True,,0.0,"[0.0, 797.0]",Météo : destination ensol total J-1,min
+meteo_precip_total_j_plus_1,meteo_,MeteoSuisse,Float32,feature_modele,True,,0.0,"[0.0, 93.69999694824219]",Météo : precip total J+1,mm
+meteo_destination_precip_total_j_plus_1,meteo_,MeteoSuisse,Float32,feature_modele,True,,0.0,"[0.0, 93.69999694824219]",Météo : destination precip total J+1,mm
+meteo_ensol_total_j_plus_1,meteo_,MeteoSuisse,Float32,feature_modele,True,,0.0,"[0.0, 797.0]",Météo : ensol total J+1,min
+meteo_destination_ensol_total_j_plus_1,meteo_,MeteoSuisse,Float32,feature_modele,True,,0.0,"[0.0, 797.0]",Météo : destination ensol total J+1,min
+id_statpop_reference_year,id_,referentiels/identifiants,Int16,hors_matrice_tracabilite,False,,0.0,"[2019, 2023]",Identifiant : statpop reference year,
+spatial_distance_km,spatial_,topologie/referentiels,Float32,feature_modele,True,,0.0,"[0.3700000047683716, 1.6299999952316284]",Longueur du tronçon,km
+spatial_gare_depart_ordre,spatial_,topologie/referentiels,Int16,feature_modele,True,,0.0,"[0, 18]",Contexte spatial : gare de départ ordre,proportion
+spatial_gare_arrivee_ordre,spatial_,topologie/referentiels,Int16,feature_modele,True,,0.0,"[0, 18]",Contexte spatial : gare d'arrivée ordre,
+spatial_segment,spatial_,topologie/referentiels,string,hors_matrice_tracabilite,False,,0.0,2 modalites,Segment de ligne,
+spatial_denivele_troncon_m,spatial_,topologie/referentiels,Float32,feature_modele,True,,0.0,"[-153.93333435058594, 153.93333435058594]",Dénivelé du tronçon,m
+spatial_gare_depart_pop_500m_total,spatial_,STATPOP,Int16,feature_modele,True,,0.0,"[15, 9366]",Population dans 500 m (gare de départ),habitants
+spatial_gare_depart_menages_500m_total,spatial_,STATPOP,Float32,feature_modele,True,,0.0,"[12.0, 4728.0]",Contexte spatial : gare de départ menages 500m total,ménages
+spatial_gare_depart_pop_par_menage_500m,spatial_,STATPOP,Float32,feature_modele,True,,0.0,"[1.1481481790542603, 3.9318182468414307]",Contexte spatial : gare de départ pop par menage 500m,proportion
+spatial_gare_depart_part_menages_1p,spatial_,STATPOP,Float32,feature_modele,True,,0.0,"[0.25, 0.5681818127632141]",Contexte spatial : gare de départ part menages 1p,proportion
+spatial_gare_depart_part_grands_menages_4p,spatial_,STATPOP,Float32,feature_modele,True,,0.0,"[0.07692307978868484, 0.75]",Contexte spatial : gare de départ part grands menages 4p,proportion
+spatial_gare_depart_part_pop_0_14_ans,spatial_,STATPOP,Float32,feature_modele,True,,0.0,"[0.04838709533214569, 0.6000000238418579]",Contexte spatial : gare de départ part pop 0 14 ans,proportion
+spatial_gare_depart_part_pop_15_24_ans,spatial_,STATPOP,Float32,feature_modele,True,,0.0,"[0.06521739065647125, 0.3925233781337738]",Contexte spatial : gare de départ part pop 15 24 ans,proportion
+spatial_gare_depart_part_pop_25_64_ans,spatial_,STATPOP,Float32,feature_modele,True,,0.0,"[0.641549825668335, 1.0]",Contexte spatial : gare de départ part pop 25 64 ans,proportion
+spatial_gare_depart_part_pop_65_plus,spatial_,STATPOP,Float32,feature_modele,True,,0.0,"[0.17713797092437744, 0.8260869383811951]",Contexte spatial : gare de départ part pop 65 plus,proportion
+spatial_gare_depart_part_pop_80_plus,spatial_,STATPOP,Float32,feature_modele,True,,0.0,"[0.0, 0.2112676054239273]",Contexte spatial : gare de départ part pop 80 plus,proportion
+spatial_gare_depart_indice_stabilite_resid,spatial_,STATPOP,Float32,feature_modele,True,,0.0,"[0.44621938467025757, 1.0]",Contexte spatial : gare de départ indice stabilite resid,proportion
+spatial_gare_depart_indice_mobilite_resid,spatial_,STATPOP,Float32,feature_modele,True,,0.0,"[0.0, 0.5346534848213196]",Contexte spatial : gare de départ indice mobilite resid,proportion
+spatial_gare_depart_part_nouveaux_arrivants_1an,spatial_,STATPOP,Float32,feature_modele,True,,0.0,"[0.0, 0.2465408742427826]",Contexte spatial : gare de départ part nouveaux arrivants 1an,proportion
+spatial_gare_depart_part_pop_etrangere,spatial_,STATPOP,Float32,feature_modele,True,,0.0,"[0.1304347813129425, 0.47921761870384216]",Contexte spatial : gare de départ part pop etrangere,proportion
+spatial_gare_depart_part_pop_nee_etranger,spatial_,STATPOP,Float32,feature_modele,True,,0.0,"[0.20000000298023224, 0.5373134613037109]",Contexte spatial : gare de départ part pop nee etranger,proportion
+spatial_gare_depart_hpi_classe_max,spatial_,STATPOP,Int16,hors_matrice_tracabilite,False,,0.0,"[1, 2]",Contexte spatial : gare de départ hpi classe max,proportion
+spatial_gare_depart_hpi_ha_classe_1,spatial_,STATPOP,Int16,feature_modele,True,,0.0,"[4, 65]",Contexte spatial : gare de départ hpi ha classe 1,proportion
+spatial_gare_depart_hpi_ha_classe_2,spatial_,STATPOP,Int16,feature_modele,True,,0.0,"[0, 3]",Contexte spatial : gare de départ hpi ha classe 2,proportion
+spatial_gare_depart_hpi_ha_manquante,spatial_,STATPOP,Int16,hors_matrice_tracabilite,False,,0.0,"[0, 1]",Contexte spatial : gare de départ hpi ha manquante,proportion
+spatial_gare_depart_hpi_ha_autre,spatial_,STATPOP,Int16,hors_matrice_tracabilite,False,,0.0,"[0, 1]",Contexte spatial : gare de départ hpi ha autre,proportion
+spatial_gare_depart_part_hpi_non_plausible,spatial_,STATPOP,Float32,feature_modele,True,,0.0,"[0.0, 0.04545454680919647]",Contexte spatial : gare de départ part hpi non plausible,proportion
+spatial_gare_depart_flag_qualite_faible,spatial_,STATPOP,Int16,hors_matrice_tracabilite,False,,0.0,"[0, 0]",Contexte spatial : gare de départ flag qualite faible,proportion
+spatial_gare_arrivee_pop_500m_total,spatial_,STATPOP,Int16,feature_modele,True,,0.0,"[15, 9366]",Population dans 500 m (gare d'arrivée),habitants
+spatial_gare_arrivee_menages_500m_total,spatial_,STATPOP,Float32,feature_modele,True,,0.0,"[12.0, 4728.0]",Contexte spatial : gare d'arrivée menages 500m total,ménages
+spatial_gare_arrivee_pop_par_menage_500m,spatial_,STATPOP,Float32,feature_modele,True,,0.0,"[1.1481481790542603, 3.9318182468414307]",Contexte spatial : gare d'arrivée pop par menage 500m,
+spatial_gare_arrivee_part_menages_1p,spatial_,STATPOP,Float32,feature_modele,True,,0.0,"[0.25, 0.5681818127632141]",Contexte spatial : gare d'arrivée part menages 1p,proportion
+spatial_gare_arrivee_part_grands_menages_4p,spatial_,STATPOP,Float32,feature_modele,True,,0.0,"[0.07692307978868484, 0.75]",Contexte spatial : gare d'arrivée part grands menages 4p,proportion
+spatial_gare_arrivee_part_pop_0_14_ans,spatial_,STATPOP,Float32,feature_modele,True,,0.0,"[0.04838709533214569, 0.6000000238418579]",Contexte spatial : gare d'arrivée part pop 0 14 ans,proportion
+spatial_gare_arrivee_part_pop_15_24_ans,spatial_,STATPOP,Float32,feature_modele,True,,0.0,"[0.06521739065647125, 0.3925233781337738]",Contexte spatial : gare d'arrivée part pop 15 24 ans,proportion
+spatial_gare_arrivee_part_pop_25_64_ans,spatial_,STATPOP,Float32,feature_modele,True,,0.0,"[0.641549825668335, 1.0]",Contexte spatial : gare d'arrivée part pop 25 64 ans,proportion
+spatial_gare_arrivee_part_pop_65_plus,spatial_,STATPOP,Float32,feature_modele,True,,0.0,"[0.17713797092437744, 0.8260869383811951]",Contexte spatial : gare d'arrivée part pop 65 plus,proportion
+spatial_gare_arrivee_part_pop_80_plus,spatial_,STATPOP,Float32,feature_modele,True,,0.0,"[0.0, 0.2112676054239273]",Contexte spatial : gare d'arrivée part pop 80 plus,proportion
+spatial_gare_arrivee_indice_stabilite_resid,spatial_,STATPOP,Float32,feature_modele,True,,0.0,"[0.44621938467025757, 1.0]",Contexte spatial : gare d'arrivée indice stabilite resid,
+spatial_gare_arrivee_indice_mobilite_resid,spatial_,STATPOP,Float32,feature_modele,True,,0.0,"[0.0, 0.5346534848213196]",Contexte spatial : gare d'arrivée indice mobilite resid,
+spatial_gare_arrivee_part_nouveaux_arrivants_1an,spatial_,STATPOP,Float32,feature_modele,True,,0.0,"[0.0, 0.2465408742427826]",Contexte spatial : gare d'arrivée part nouveaux arrivants 1an,proportion
+spatial_gare_arrivee_part_pop_etrangere,spatial_,STATPOP,Float32,feature_modele,True,,0.0,"[0.1304347813129425, 0.47921761870384216]",Contexte spatial : gare d'arrivée part pop etrangere,proportion
+spatial_gare_arrivee_part_pop_nee_etranger,spatial_,STATPOP,Float32,feature_modele,True,,0.0,"[0.20000000298023224, 0.5373134613037109]",Contexte spatial : gare d'arrivée part pop nee etranger,proportion
+spatial_gare_arrivee_hpi_classe_max,spatial_,STATPOP,Int16,hors_matrice_tracabilite,False,,0.0,"[1, 2]",Contexte spatial : gare d'arrivée hpi classe max,
+spatial_gare_arrivee_hpi_ha_classe_1,spatial_,STATPOP,Int16,feature_modele,True,,0.0,"[4, 65]",Contexte spatial : gare d'arrivée hpi ha classe 1,
+spatial_gare_arrivee_hpi_ha_classe_2,spatial_,STATPOP,Int16,hors_matrice_tracabilite,False,,0.0,"[0, 3]",Contexte spatial : gare d'arrivée hpi ha classe 2,
+spatial_gare_arrivee_hpi_ha_manquante,spatial_,STATPOP,Int16,hors_matrice_tracabilite,False,,0.0,"[0, 1]",Contexte spatial : gare d'arrivée hpi ha manquante,
+spatial_gare_arrivee_hpi_ha_autre,spatial_,STATPOP,Int16,hors_matrice_tracabilite,False,,0.0,"[0, 1]",Contexte spatial : gare d'arrivée hpi ha autre,
+spatial_gare_arrivee_part_hpi_non_plausible,spatial_,STATPOP,Float32,feature_modele,True,,0.0,"[0.0, 0.04545454680919647]",Contexte spatial : gare d'arrivée part hpi non plausible,proportion
+spatial_gare_arrivee_flag_qualite_faible,spatial_,STATPOP,Int16,hors_matrice_tracabilite,False,,0.0,"[0, 0]",Contexte spatial : gare d'arrivée flag qualite faible,
+spatial_statpop_source_depart,spatial_,STATPOP,string,hors_matrice_tracabilite,False,,0.0,2 modalites,Contexte spatial : statpop source au départ,
+spatial_statpop_source_arrivee,spatial_,STATPOP,string,hors_matrice_tracabilite,False,,0.0,2 modalites,Contexte spatial : statpop source à l'arrivée,
+meteo_temperature_h,meteo_,MeteoSuisse,Float32,feature_modele,True,,0.028,"[-15.199999809265137, 35.20000076293945]",Météo : temperature h,°C
+meteo_precipitation_mm_h,meteo_,MeteoSuisse,Float32,feature_modele,True,,0.07,"[0.0, 48.900001525878906]",Météo : precipitation mm h,mm
+meteo_ensoleillement_min_h,meteo_,MeteoSuisse,Float32,feature_modele,True,,0.0,"[0.0, 60.0]",Météo : ensoleillement min h,min
+meteo_vent_max_h,meteo_,MeteoSuisse,Float32,feature_modele,True,,0.119,"[0.0, 109.4000015258789]",Météo : vent max h,km/h
+meteo_neige_binaire_h,meteo_,MeteoSuisse,Int8,feature_modele,True,,0.0,"[0, 1]",Météo : neige binaire h,indicatrice
+spatial_gare_depart_emplois_500m_total,spatial_,STATENT,Float32,hors_matrice_retrait_trace,False,ADR-064,0.0,"[4.0, 8755.0]",Contexte spatial : gare de départ emplois 500m total,emplois
+spatial_gare_depart_emplois_500m_services,spatial_,STATENT,Float32,hors_matrice_retrait_trace,False,ADR-064,0.0,"[4.0, 8201.0]",Contexte spatial : gare de départ emplois 500m services,emplois
+spatial_gare_arrivee_emplois_500m_total,spatial_,STATENT,Float32,hors_matrice_retrait_trace,False,ADR-064,0.0,"[4.0, 8755.0]",Contexte spatial : gare d'arrivée emplois 500m total,emplois
+spatial_gare_arrivee_emplois_500m_services,spatial_,STATENT,Float32,hors_matrice_retrait_trace,False,ADR-064,0.0,"[4.0, 8201.0]",Contexte spatial : gare d'arrivée emplois 500m services,emplois
+ist_profil_train_retard_dep_troncon_mean_5occ,ist_,ISTDATEN,Float32,feature_modele,True,,39.632,"[-1076.6666259765625, 2318.333251953125]",Régularité et correspondances : profil train retard dep troncon mean (5 occ.),secondes
+ist_profil_train_retard_dep_troncon_std_5occ,ist_,ISTDATEN,Float32,feature_modele,True,,39.632,"[0.0, 3294.455322265625]",Régularité et correspondances : profil train retard dep troncon écart-type (5 occ.),secondes
+ist_profil_train_retard_dep_troncon_mean_20occ,ist_,ISTDATEN,Float32,feature_modele,True,,40.926,"[-245.05262756347656, 557.3529663085938]",Régularité et correspondances : profil train retard dep troncon mean (20 occ.),secondes
+ist_profil_train_retard_dep_troncon_std_20occ,ist_,ISTDATEN,Float32,feature_modele,True,,40.926,"[1.140175461769104, 1643.3377685546875]",Régularité et correspondances : profil train retard dep troncon écart-type (20 occ.),secondes
+ist_profil_train_retard_arr_troncon_mean_5occ,ist_,ISTDATEN,Float32,feature_modele,True,,39.628,"[-774.5, 2306.0]",Régularité et correspondances : profil train retard arr troncon mean (5 occ.),secondes
+ist_profil_train_retard_arr_troncon_std_5occ,ist_,ISTDATEN,Float32,feature_modele,True,,39.628,"[0.0, 3295.134521484375]",Régularité et correspondances : profil train retard arr troncon écart-type (5 occ.),secondes
+ist_profil_train_retard_arr_troncon_mean_20occ,ist_,ISTDATEN,Float32,feature_modele,True,,40.924,"[-542.8333129882812, 538.5294189453125]",Régularité et correspondances : profil train retard arr troncon mean (20 occ.),secondes
+ist_profil_train_retard_arr_troncon_std_20occ,ist_,ISTDATEN,Float32,feature_modele,True,,40.924,"[3.130495071411133, 1643.55224609375]",Régularité et correspondances : profil train retard arr troncon écart-type (20 occ.),secondes
+ist_profil_train_pct_en_retard_dep_troncon_5occ,ist_,ISTDATEN,Float32,feature_modele,True,,39.632,"[0.0, 1.0]",Régularité et correspondances : profil train part en retard dep troncon (5 occ.),secondes
+ist_profil_train_pct_en_retard_dep_troncon_20occ,ist_,ISTDATEN,Float32,feature_modele,True,,40.926,"[0.0, 1.0]",Régularité et correspondances : profil train part en retard dep troncon (20 occ.),secondes
+ist_profil_train_pct_en_retard_arr_troncon_5occ,ist_,ISTDATEN,Float32,feature_modele,True,,39.628,"[0.0, 1.0]",Régularité et correspondances : profil train part en retard arr troncon (5 occ.),secondes
+ist_profil_train_pct_en_retard_arr_troncon_20occ,ist_,ISTDATEN,Float32,feature_modele,True,,40.924,"[0.0, 1.0]",Régularité et correspondances : profil train part en retard arr troncon (20 occ.),secondes
+ist_corresp_in_n_garanties_moy_20occ,ist_,ISTDATEN,float64,feature_modele,True,,57.359,"[0.0, 2.2]",Régularité et correspondances : corresp in n garanties moyenne (20 occ.),
+ist_corresp_in_n_garanties_moy_5occ,ist_,ISTDATEN,float64,feature_modele,True,,56.985,"[0.0, 2.4]",Régularité et correspondances : corresp in n garanties moyenne (5 occ.),
+ist_corresp_in_n_theoriques_moy_20occ,ist_,ISTDATEN,float64,feature_modele,True,,57.359,"[0.0, 3.0]",Régularité et correspondances : corresp in n theoriques moyenne (20 occ.),
+ist_corresp_in_n_theoriques_moy_5occ,ist_,ISTDATEN,float64,feature_modele,True,,56.985,"[0.0, 3.0]",Régularité et correspondances : corresp in n theoriques moyenne (5 occ.),
+ist_corresp_in_pct_garanties_20occ,ist_,ISTDATEN,float64,feature_modele,True,,78.218,"[0.0, 1.0]",Régularité et correspondances : corresp in part garanties (20 occ.),
+ist_corresp_in_pct_garanties_5occ,ist_,ISTDATEN,float64,feature_modele,True,,78.679,"[0.0, 1.0]",Régularité et correspondances : corresp in part garanties (5 occ.),
+ist_corresp_out_n_garanties_moy_20occ,ist_,ISTDATEN,float64,feature_modele,True,,56.11,"[0.0, 1.95]",Régularité et correspondances : corresp out n garanties moyenne (20 occ.),
+ist_corresp_out_n_garanties_moy_5occ,ist_,ISTDATEN,float64,feature_modele,True,,55.754,"[0.0, 2.0]",Régularité et correspondances : corresp out n garanties moyenne (5 occ.),
+ist_corresp_out_n_theoriques_moy_20occ,ist_,ISTDATEN,float64,feature_modele,True,,56.11,"[0.0, 2.15]",Régularité et correspondances : corresp out n theoriques moyenne (20 occ.),
+ist_corresp_out_n_theoriques_moy_5occ,ist_,ISTDATEN,float64,feature_modele,True,,55.754,"[0.0, 2.4]",Régularité et correspondances : corresp out n theoriques moyenne (5 occ.),
+ist_corresp_out_pct_garanties_20occ,ist_,ISTDATEN,float64,feature_modele,True,,66.845,"[0.0, 1.0]",Régularité et correspondances : corresp out part garanties (20 occ.),
+ist_corresp_out_pct_garanties_5occ,ist_,ISTDATEN,float64,feature_modele,True,,67.311,"[0.0, 1.0]",Régularité et correspondances : corresp out part garanties (5 occ.),
+vmcv_n_lignes_concurrentes,vmcv_,ISTDATEN (VMCV),float64,feature_modele,True,,11.945,"[0.0, 5.0]",Concurrence modale : n lignes concurrentes,
+vmcv_min_attente_min,vmcv_,ISTDATEN (VMCV),float64,feature_modele,True,,46.041,"[0.0, 35.0]",Concurrence modale : min attente min,
+vmcv_delta_attente_min,vmcv_,ISTDATEN (VMCV),float64,feature_modele,True,,46.041,"[-30.0, 5.0]",Concurrence modale : delta attente min,
+vmcv_delta_frequence_h,vmcv_,ISTDATEN (VMCV),float64,feature_modele,True,,44.524,"[-4.0, 64.0]",Concurrence modale : delta frequence h,
+vmcv_source_depart,vmcv_,ISTDATEN (VMCV),string,hors_matrice_tracabilite,False,,0.0,2 modalites,Concurrence modale : source au départ,
+vmcv_source_arrivee,vmcv_,ISTDATEN (VMCV),string,hors_matrice_tracabilite,False,,0.0,2 modalites,Concurrence modale : source à l'arrivée,
+horaire_service_id_complet,horaire_,horaires,object,hors_matrice_tracabilite,False,,0.0,276 modalites,Horaire : service id complet,
+target_voyageurs_total,target_,APC,float64,cible_alternative,False,,0.0,"[0.0, 223.0]",Charge totale,voyageurs
+base_offre_total,base_,APC,float64,hors_matrice_tracabilite,False,,0.0,"[78.0, 306.0]",Desserte : offre total,
+histo_voyageurs_1ere_classe_lag2,histo_,APC,float64,feature_modele,True,,0.785,"[0.0, 15.0]",Historique de charge : voyageurs 1re classe J-2,
+histo_voyageurs_1ere_classe_win7_mean,histo_,APC,float64,feature_modele,True,,0.771,"[0.0, 10.142857142857142]",Historique de charge : voyageurs 1re classe fenêtre 7 occ. mean,
+histo_voyageurs_1ere_classe_win7_median,histo_,APC,float64,feature_modele,True,,0.771,"[0.0, 13.0]",Historique de charge : voyageurs 1re classe fenêtre 7 occ. median,
+histo_voyageurs_1ere_classe_win7_max,histo_,APC,float64,feature_modele,True,,0.771,"[0.0, 27.0]",Historique de charge : voyageurs 1re classe fenêtre 7 occ. max,
+histo_voyageurs_1ere_classe_win7_std,histo_,APC,float64,feature_modele,True,,0.771,"[0.0, 9.93071234197465]",Historique de charge : voyageurs 1re classe fenêtre 7 occ. écart-type,
+histo_voyageurs_2eme_classe_lag2,histo_,APC,float64,feature_modele,True,,0.721,"[0.0, 172.0]",Charge de 2e classe à J-2,voyageurs
+histo_voyageurs_2eme_classe_win7_mean,histo_,APC,float64,feature_modele,True,,0.696,"[0.0, 144.85714285714286]","Charge de 2e classe, moyenne 7 occ. (J-2)",voyageurs
+histo_voyageurs_2eme_classe_win7_median,histo_,APC,float64,feature_modele,True,,0.696,"[0.0, 151.0]",Historique de charge : voyageurs 2e classe fenêtre 7 occ. median,
+histo_voyageurs_2eme_classe_win7_max,histo_,APC,float64,feature_modele,True,,0.696,"[0.0, 206.0]","Charge de 2e classe, maximum 7 occ. (J-2)",voyageurs
+histo_voyageurs_2eme_classe_win7_std,histo_,APC,float64,feature_modele,True,,0.696,"[0.0, 72.91547618075786]",Historique de charge : voyageurs 2e classe fenêtre 7 occ. écart-type,
+histo_voyageurs_2eme_classe_win7_n_surcharges,histo_,APC,float64,feature_modele,True,,0.696,"[0.0, 7.0]",Surcharges sur 7 occ. (J-2),nombre
+histo_voyageurs_total_lag2,histo_,APC,float64,feature_modele,True,,0.681,"[0.0, 179.0]",Historique de charge : voyageurs total J-2,
+histo_voyageurs_total_win7_mean,histo_,APC,float64,feature_modele,True,,0.681,"[0.0, 149.57142857142858]",Historique de charge : voyageurs total fenêtre 7 occ. mean,
+histo_voyageurs_total_win7_median,histo_,APC,float64,feature_modele,True,,0.681,"[0.0, 155.0]",Historique de charge : voyageurs total fenêtre 7 occ. median,
+histo_voyageurs_total_win7_max,histo_,APC,float64,feature_modele,True,,0.681,"[0.0, 223.0]",Historique de charge : voyageurs total fenêtre 7 occ. max,
+histo_voyageurs_total_win7_std,histo_,APC,float64,feature_modele,True,,0.681,"[0.0, 77.51558982983144]",Historique de charge : voyageurs total fenêtre 7 occ. écart-type,
+ist_headway_avant_min,ist_,ISTDATEN,float64,feature_modele,True,,4.71,"[0.0, 330.0]",Intervalle au train précédent (amont),minutes
+ist_headway_apres_min,ist_,ISTDATEN,float64,feature_modele,True,,4.448,"[0.0, 195.0]",Intervalle au train suivant (aval),minutes
+ist_headway_avant_is_first_of_day,ist_,ISTDATEN,float64,feature_modele,True,,1.495,"[0.0, 1.0]",Régularité et correspondances : headway avant is first of day,minutes
+ist_headway_apres_is_last_of_day,ist_,ISTDATEN,float64,feature_modele,True,,1.495,"[0.0, 1.0]",Régularité et correspondances : headway apres is last of day,minutes
+simba_part_ga,simba_,SIMBA,float64,hors_matrice_retrait_trace,False,ADR-061,29.571,"[0.0, 1.0]",Structure tarifaire : part ga,proportion
+simba_part_mobilis,simba_,SIMBA,float64,hors_matrice_retrait_trace,False,ADR-061,29.571,"[0.0, 1.0]",Structure tarifaire : part mobilis,proportion
+simba_part_billet_hta,simba_,SIMBA,float64,hors_matrice_retrait_trace,False,ADR-061,29.571,"[0.0, 1.0]",Structure tarifaire : part billet hta,proportion
+simba_part_spar,simba_,SIMBA,float64,hors_matrice_retrait_trace,False,ADR-061,29.571,"[0.0, 1.0]",Structure tarifaire : part spar,proportion
+simba_part_jeunes,simba_,SIMBA,float64,hors_matrice_retrait_trace,False,ADR-061,29.571,"[0.0, 1.0]",Structure tarifaire : part jeunes,proportion
+simba_part_abonnement,simba_,SIMBA,float64,hors_matrice_retrait_trace,False,ADR-061,29.571,"[0.0, 1.0]",Structure tarifaire : part abonnement,proportion
+simba_part_militaire,simba_,SIMBA,float64,hors_matrice_retrait_trace,False,ADR-061,29.571,"[0.0, 0.3425727337860035]",Structure tarifaire : part militaire,proportion
+simba_part_autre,simba_,SIMBA,float64,hors_matrice_retrait_trace,False,ADR-061,29.571,"[0.0, 1.0]",Structure tarifaire : part autre,proportion
+simba_part_corresp_amont,simba_,SIMBA,float64,hors_matrice_retrait_trace,False,ADR-061,29.571,"[0.0, 1.0000000000000004]",Structure tarifaire : part corresp amont,proportion
+simba_part_corresp_aval,simba_,SIMBA,float64,hors_matrice_retrait_trace,False,ADR-061,29.571,"[0.0, 1.0000000000000002]",Structure tarifaire : part corresp aval,proportion
+simba_part_premiere_classe,simba_,SIMBA,float64,hors_matrice_retrait_trace,False,ADR-061,29.571,"[0.0, 1.0]",Structure tarifaire : part premiere classe,proportion
+simba_part_intra_r35,simba_,SIMBA,float64,hors_matrice_retrait_trace,False,ADR-061,29.571,"[0.0, 1.0000000000000002]",Structure tarifaire : part intra r35,proportion
+simba_source_depart,simba_,SIMBA,string,hors_matrice_retrait_trace,False,ADR-061,0.0,2 modalites,Structure tarifaire : source au départ,
+simba_source_arrivee,simba_,SIMBA,string,hors_matrice_retrait_trace,False,ADR-061,0.0,2 modalites,Structure tarifaire : source à l'arrivée,
+resa_pax_2c_J_minus_1,resa_,ResSys/CAPRE,int32,feature_modele,True,,0.0,"[0, 219]",Voyageurs réservés 2e classe (J-1),voyageurs
+resa_n_dossiers_J_minus_1,resa_,ResSys/CAPRE,int32,feature_modele,True,,0.0,"[0, 6]",Dossiers de réservation (J-1),nombre
+resa_max_groupe_2c_J_minus_1,resa_,ResSys/CAPRE,int32,feature_modele,True,,0.0,"[0, 210]",Réservation de groupe : max groupe 2c J-1,
+resa_part_scolaire_J_minus_1,resa_,ResSys/CAPRE,float32,feature_modele,True,,0.0,"[0.0, 1.0]",Réservation de groupe : part scolaire J-1,proportion
+resa_part_tour_operator_J_minus_1,resa_,ResSys/CAPRE,float32,feature_modele,True,,0.0,"[0.0, 1.0]",Réservation de groupe : part tour operator J-1,proportion
+resa_n_pays_distincts_J_minus_1,resa_,ResSys/CAPRE,int32,feature_modele,True,,0.0,"[0, 2]",Réservation de groupe : n pays distincts J-1,
+resa_n_langues_distinctes_J_minus_1,resa_,ResSys/CAPRE,int32,feature_modele,True,,0.0,"[0, 2]",Réservation de groupe : n langues distinctes J-1,
+resa_has_resa_J_minus_1,resa_,ResSys/CAPRE,int8,feature_modele,True,,0.0,"[0, 1]",Présence d'une réservation (J-1),indicatrice

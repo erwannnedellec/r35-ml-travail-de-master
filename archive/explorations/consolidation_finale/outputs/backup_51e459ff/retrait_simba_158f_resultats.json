@@ -1,0 +1,49 @@
+{
+  "model_version": "1.6",
+  "adr_decision": "ADR-CF17 (retrait SIMBA) + ADR-CF20 (retrait STATENT) + ADR-CF21 (Split C)",
+  "dataset_hash": "51e459ff",
+  "seuil_surcharge": 63,
+  "n_features_apres": 158,
+  "n_train": 801282,
+  "n_test_h25": 309252,
+  "split": "Split C — H22 (Gilamont exclu) + H23 + H24",
+  "metrics_158f": {
+    "bas": {
+      "r2": 0.5919678558524641,
+      "mae": 8.145985380397029,
+      "r2_ci_lo": 0.5881457684505196,
+      "r2_ci_hi": 0.595595408181117,
+      "mae_gt63": 26.673082165427157,
+      "bias_gt63": -25.998783414425226,
+      "pr_auc_diagnostic": 0.4813774502375151,
+      "n_obs": 229747,
+      "n_surch": 8392,
+      "prevalence": 0.036527
+    },
+    "haut": {
+      "r2": 0.4471840293195297,
+      "mae": 6.1965699545553266,
+      "r2_ci_lo": 0.43492386335563593,
+      "r2_ci_hi": 0.45788052159016934,
+      "mae_gt63": 42.67016557779088,
+      "bias_gt63": -42.455658161200134,
+      "pr_auc_diagnostic": 0.3409990067200325,
+      "n_obs": 79505,
+      "n_surch": 1192,
+      "prevalence": 0.014993
+    },
+    "global": {
+      "r2": 0.6073602050091205,
+      "mae": 7.644813929827446,
+      "r2_ci_lo": 0.6040451422135817,
+      "r2_ci_hi": 0.6108593729819632,
+      "mae_gt63": 28.66270272339226,
+      "bias_gt63": -28.045590039858833,
+      "pr_auc_diagnostic": 0.45708584554648746,
+      "n_obs": 309252,
+      "n_surch": 9584,
+      "prevalence": 0.030991
+    }
+  },
+  "created_at": "2026-06-20T17:07:44"
+}

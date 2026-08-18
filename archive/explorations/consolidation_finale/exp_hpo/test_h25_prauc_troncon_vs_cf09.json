@@ -1,0 +1,239 @@
+{
+  "experiment": "test H25 décisif — candidat best-PR-AUC-tronçon vs CF09",
+  "statut": "EXPERIMENTAL hors canonique — aucun modèle sauvegardé, hash 416bb90b intact, H25 touché une fois, pas de re-figement",
+  "protocole": "train H22(Gil exclu)+H23+H24 → test H25 (Split C) ; iso sauf HP partagés ; seed42 seuil63 reg:squarederror seg bas/haut",
+  "hp_cf09": {
+    "n_estimators": 300,
+    "max_depth": 6,
+    "learning_rate": 0.1,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 1,
+    "reg_lambda": 1.0,
+    "reg_alpha": 0.0,
+    "gamma": 0.0
+  },
+  "hp_candidat": {
+    "max_depth": 8,
+    "learning_rate": 0.025467166524142874,
+    "n_estimators": 597,
+    "subsample": 0.6762802889616667,
+    "colsample_bytree": 0.6168682373368515,
+    "min_child_weight": 2,
+    "reg_lambda": 3.417550089972704,
+    "reg_alpha": 0.18408206080107936,
+    "gamma": 3.9994404500154395
+  },
+  "garde_fou_cf09_reproduit_canon": true,
+  "cf09_h25": {
+    "bas": {
+      "r2": 0.5868201570605139,
+      "mae_global": 8.169355239485666,
+      "bias_gt63": -26.507214227270467,
+      "mae_gt63": 27.202408980766403,
+      "pr_auc_troncon": 0.468682360770091,
+      "pr_auc_tour": 0.5530535917585301
+    },
+    "haut": {
+      "r2": 0.4333585691963404,
+      "mae_global": 6.38913175142802,
+      "bias_gt63": -42.26554917769144,
+      "mae_gt63": 42.40157375519708,
+      "pr_auc_troncon": 0.3451901542137515,
+      "pr_auc_tour": 0.34592694345150315
+    },
+    "global": {
+      "r2": 0.6013368502570058,
+      "mae_global": 7.711681017757035,
+      "bias_gt63": -28.467140694392942,
+      "mae_gt63": 29.09278924069142,
+      "pr_auc_troncon": 0.44897336321162107,
+      "pr_auc_tour": 0.5634987603694904
+    }
+  },
+  "candidat_h25": {
+    "bas": {
+      "r2": 0.5939542498955815,
+      "mae_global": 8.128751417772143,
+      "bias_gt63": -26.948295795258392,
+      "mae_gt63": 27.380255182034862,
+      "pr_auc_troncon": 0.48218424351132516,
+      "pr_auc_tour": 0.563290577969505
+    },
+    "haut": {
+      "r2": 0.46711637819867746,
+      "mae_global": 6.090234030149115,
+      "bias_gt63": -45.20153657021939,
+      "mae_gt63": 45.20185782405354,
+      "pr_auc_troncon": 0.3373987589751972,
+      "pr_auc_tour": 0.3401599831781182
+    },
+    "global": {
+      "r2": 0.6119639476240046,
+      "mae_global": 7.604672915764173,
+      "bias_gt63": -29.218523571109134,
+      "mae_gt63": 29.59679841547458,
+      "pr_auc_troncon": 0.45927206559905315,
+      "pr_auc_tour": 0.5684803566122506
+    }
+  },
+  "deltas": [
+    {
+      "segment": "bas",
+      "metric": "r2",
+      "cf09": 0.5868201570605139,
+      "cand": 0.5939542498955815,
+      "delta_h25": 0.007134092835067607,
+      "delta_h24": null
+    },
+    {
+      "segment": "bas",
+      "metric": "mae_global",
+      "cf09": 8.169355239485666,
+      "cand": 8.128751417772143,
+      "delta_h25": -0.04060382171352295,
+      "delta_h24": null
+    },
+    {
+      "segment": "bas",
+      "metric": "bias_gt63",
+      "cf09": -26.507214227270467,
+      "cand": -26.948295795258392,
+      "delta_h25": -0.44108156798792564,
+      "delta_h24": null
+    },
+    {
+      "segment": "bas",
+      "metric": "mae_gt63",
+      "cf09": 27.202408980766403,
+      "cand": 27.380255182034862,
+      "delta_h25": 0.17784620126845851,
+      "delta_h24": null
+    },
+    {
+      "segment": "bas",
+      "metric": "pr_auc_troncon",
+      "cf09": 0.468682360770091,
+      "cand": 0.48218424351132516,
+      "delta_h25": 0.01350188274123415,
+      "delta_h24": 0.02729999999999999
+    },
+    {
+      "segment": "bas",
+      "metric": "pr_auc_tour",
+      "cf09": 0.5530535917585301,
+      "cand": 0.563290577969505,
+      "delta_h25": 0.010236986210974908,
+      "delta_h24": null
+    },
+    {
+      "segment": "haut",
+      "metric": "r2",
+      "cf09": 0.4333585691963404,
+      "cand": 0.46711637819867746,
+      "delta_h25": 0.03375780900233705,
+      "delta_h24": null
+    },
+    {
+      "segment": "haut",
+      "metric": "mae_global",
+      "cf09": 6.38913175142802,
+      "cand": 6.090234030149115,
+      "delta_h25": -0.29889772127890524,
+      "delta_h24": null
+    },
+    {
+      "segment": "haut",
+      "metric": "bias_gt63",
+      "cf09": -42.26554917769144,
+      "cand": -45.20153657021939,
+      "delta_h25": -2.9359873925279487,
+      "delta_h24": null
+    },
+    {
+      "segment": "haut",
+      "metric": "mae_gt63",
+      "cf09": 42.40157375519708,
+      "cand": 45.20185782405354,
+      "delta_h25": 2.800284068856463,
+      "delta_h24": null
+    },
+    {
+      "segment": "haut",
+      "metric": "pr_auc_troncon",
+      "cf09": 0.3451901542137515,
+      "cand": 0.3373987589751972,
+      "delta_h25": -0.007791395238554266,
+      "delta_h24": 0.02150000000000002
+    },
+    {
+      "segment": "haut",
+      "metric": "pr_auc_tour",
+      "cf09": 0.34592694345150315,
+      "cand": 0.3401599831781182,
+      "delta_h25": -0.005766960273384969,
+      "delta_h24": null
+    },
+    {
+      "segment": "global",
+      "metric": "r2",
+      "cf09": 0.6013368502570058,
+      "cand": 0.6119639476240046,
+      "delta_h25": 0.01062709736699885,
+      "delta_h24": 0.017800000000000038
+    },
+    {
+      "segment": "global",
+      "metric": "mae_global",
+      "cf09": 7.711681017757035,
+      "cand": 7.604672915764173,
+      "delta_h25": -0.10700810199286259,
+      "delta_h24": null
+    },
+    {
+      "segment": "global",
+      "metric": "bias_gt63",
+      "cf09": -28.467140694392942,
+      "cand": -29.218523571109134,
+      "delta_h25": -0.7513828767161925,
+      "delta_h24": 0.7099999999999973
+    },
+    {
+      "segment": "global",
+      "metric": "mae_gt63",
+      "cf09": 29.09278924069142,
+      "cand": 29.59679841547458,
+      "delta_h25": 0.5040091747831603,
+      "delta_h24": null
+    },
+    {
+      "segment": "global",
+      "metric": "pr_auc_troncon",
+      "cf09": 0.44897336321162107,
+      "cand": 0.45927206559905315,
+      "delta_h25": 0.01029870238743208,
+      "delta_h24": 0.027800000000000047
+    },
+    {
+      "segment": "global",
+      "metric": "pr_auc_tour",
+      "cf09": 0.5634987603694904,
+      "cand": 0.5684803566122506,
+      "delta_h25": 0.004981596242760178,
+      "delta_h24": 0.011599999999999944
+    }
+  ],
+  "critere": {
+    "cond1_gain_min": 0.014,
+    "gain_h25": 0.01029870238743208,
+    "cond1_ok": false,
+    "cond2_degradations": [
+      "biais>63 haut -2.94",
+      "biais>63 global -0.75",
+      "HAUT pr_auc_troncon -0.0078",
+      "HAUT pr_auc_tour -0.0058"
+    ],
+    "cond2_ok": false
+  },
+  "verdict": "NON-ADOPTION — CF09 conservé (gain insuffisant + dégradation matérielle)"
+}

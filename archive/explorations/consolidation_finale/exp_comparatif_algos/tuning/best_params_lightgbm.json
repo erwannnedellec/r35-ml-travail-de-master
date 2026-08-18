@@ -1,0 +1,36 @@
+{
+  "algo": "lightgbm",
+  "n_trials": 40,
+  "seed": 42,
+  "best_cv_rmse_mean": 10.494304315338214,
+  "cv_rmse_folds": [
+    11.479567885823599,
+    10.399584192868963,
+    9.603760867322078
+  ],
+  "cv_rmse_std": 0.7687183788034614,
+  "best_params": {
+    "learning_rate": 0.03400520022372472,
+    "num_leaves": 71,
+    "max_depth": 11,
+    "subsample": 0.6316311075518078,
+    "colsample_bytree": 0.6000771907494752,
+    "min_child_samples": 49,
+    "reg_lambda": 0.04109881970871397,
+    "reg_alpha": 3.8160118172669297
+  },
+  "n_arbres_bas": 453,
+  "n_arbres_haut": 175,
+  "search_space": {
+    "learning_rate": "loguniform[0.01,0.3]",
+    "num_leaves": "int[15,255]",
+    "max_depth": "int[3,12]",
+    "subsample": "unif[0.6,1.0] (bagging_freq=1)",
+    "colsample_bytree": "unif[0.6,1.0]",
+    "min_child_samples": "int[5,100]",
+    "reg_lambda": "loguniform[1e-2,10]",
+    "reg_alpha": "loguniform[1e-3,10]",
+    "n_estimators": "<= 600 via early stopping (40)"
+  },
+  "tuning_minutes": 37.17
+}

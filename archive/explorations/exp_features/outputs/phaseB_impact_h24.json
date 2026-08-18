@@ -1,0 +1,290 @@
+{
+  "experiment": "CHANTIER FEATURES Phase B — impact 8 features cantonales",
+  "statut": "EXPERIMENTAL hors canonique — aucun modele sauvegarde, hash 416bb90b intact, H25 jamais charge",
+  "protocole": "train H22(Gilamont exclu)+H23 → validation H24 ; iso ADR-CF09, seed=42, seuil 63, reg:squarederror, segmentation bas/haut",
+  "baseline_158f": {
+    "bas": {
+      "n_obs": 251106,
+      "n_gt63": 8917,
+      "r2_global": 0.6170304816181136,
+      "mae_global": 7.506187283446403,
+      "bias_gt63": -28.10314259513606,
+      "mae_gt63": 28.366704554492024,
+      "pr_auc_troncon": 0.49187962280646613,
+      "pr_auc_tour": 0.5880528549569309
+    },
+    "haut": {
+      "n_obs": 84603,
+      "n_gt63": 620,
+      "r2_global": 0.5101461756476031,
+      "mae_global": 4.775893699563974,
+      "bias_gt63": -43.858697367994296,
+      "mae_gt63": 44.39623964960657,
+      "pr_auc_troncon": 0.30766859207404135,
+      "pr_auc_tour": 0.3126193411038228
+    },
+    "global": {
+      "n_obs": 335709,
+      "n_gt63": 9537,
+      "r2_global": 0.6586008754969208,
+      "mae_global": 6.8181180685096425,
+      "bias_gt63": -29.127410599662863,
+      "mae_gt63": 29.408784009139296,
+      "pr_auc_troncon": 0.4759245050284993,
+      "pr_auc_tour": 0.5902590576472103
+    }
+  },
+  "candidat_166f": {
+    "bas": {
+      "n_obs": 251106,
+      "n_gt63": 8917,
+      "r2_global": 0.6233161569765875,
+      "mae_global": 7.4656579061750605,
+      "bias_gt63": -27.10882790882491,
+      "mae_gt63": 27.469029775365822,
+      "pr_auc_troncon": 0.510957933053338,
+      "pr_auc_tour": 0.6002867623145615
+    },
+    "haut": {
+      "n_obs": 84603,
+      "n_gt63": 620,
+      "r2_global": 0.49827639415216995,
+      "mae_global": 4.8090498065654845,
+      "bias_gt63": -45.267812099572154,
+      "mae_gt63": 45.58530273264454,
+      "pr_auc_troncon": 0.3055138390885171,
+      "pr_auc_tour": 0.3141257402415529
+    },
+    "global": {
+      "n_obs": 335709,
+      "n_gt63": 9537,
+      "r2_global": 0.6619973516732225,
+      "mae_global": 6.796158384114977,
+      "bias_gt63": -28.289342766564584,
+      "mae_gt63": 28.646767977474745,
+      "pr_auc_troncon": 0.4963682890202944,
+      "pr_auc_tour": 0.6026199969006774
+    }
+  },
+  "deltas": [
+    {
+      "segment": "bas",
+      "metric": "r2_global",
+      "v158": 0.6170304816181136,
+      "v166": 0.6233161569765875,
+      "delta": 0.006285675358473908
+    },
+    {
+      "segment": "bas",
+      "metric": "mae_global",
+      "v158": 7.506187283446403,
+      "v166": 7.4656579061750605,
+      "delta": -0.040529377271342426
+    },
+    {
+      "segment": "bas",
+      "metric": "bias_gt63",
+      "v158": -28.10314259513606,
+      "v166": -27.10882790882491,
+      "delta": 0.9943146863111494
+    },
+    {
+      "segment": "bas",
+      "metric": "mae_gt63",
+      "v158": 28.366704554492024,
+      "v166": 27.469029775365822,
+      "delta": -0.8976747791262021
+    },
+    {
+      "segment": "bas",
+      "metric": "pr_auc_troncon",
+      "v158": 0.49187962280646613,
+      "v166": 0.510957933053338,
+      "delta": 0.0190783102468719
+    },
+    {
+      "segment": "bas",
+      "metric": "pr_auc_tour",
+      "v158": 0.5880528549569309,
+      "v166": 0.6002867623145615,
+      "delta": 0.012233907357630525
+    },
+    {
+      "segment": "haut",
+      "metric": "r2_global",
+      "v158": 0.5101461756476031,
+      "v166": 0.49827639415216995,
+      "delta": -0.011869781495433163
+    },
+    {
+      "segment": "haut",
+      "metric": "mae_global",
+      "v158": 4.775893699563974,
+      "v166": 4.8090498065654845,
+      "delta": 0.033156107001510726
+    },
+    {
+      "segment": "haut",
+      "metric": "bias_gt63",
+      "v158": -43.858697367994296,
+      "v166": -45.267812099572154,
+      "delta": -1.4091147315778585
+    },
+    {
+      "segment": "haut",
+      "metric": "mae_gt63",
+      "v158": 44.39623964960657,
+      "v166": 45.58530273264454,
+      "delta": 1.189063083037972
+    },
+    {
+      "segment": "haut",
+      "metric": "pr_auc_troncon",
+      "v158": 0.30766859207404135,
+      "v166": 0.3055138390885171,
+      "delta": -0.0021547529855242553
+    },
+    {
+      "segment": "haut",
+      "metric": "pr_auc_tour",
+      "v158": 0.3126193411038228,
+      "v166": 0.3141257402415529,
+      "delta": 0.0015063991377300967
+    },
+    {
+      "segment": "global",
+      "metric": "r2_global",
+      "v158": 0.6586008754969208,
+      "v166": 0.6619973516732225,
+      "delta": 0.003396476176301677
+    },
+    {
+      "segment": "global",
+      "metric": "mae_global",
+      "v158": 6.8181180685096425,
+      "v166": 6.796158384114977,
+      "delta": -0.021959684394665224
+    },
+    {
+      "segment": "global",
+      "metric": "bias_gt63",
+      "v158": -29.127410599662863,
+      "v166": -28.289342766564584,
+      "delta": 0.8380678330982789
+    },
+    {
+      "segment": "global",
+      "metric": "mae_gt63",
+      "v158": 29.408784009139296,
+      "v166": 28.646767977474745,
+      "delta": -0.762016031664551
+    },
+    {
+      "segment": "global",
+      "metric": "pr_auc_troncon",
+      "v158": 0.4759245050284993,
+      "v166": 0.4963682890202944,
+      "delta": 0.020443783991795084
+    },
+    {
+      "segment": "global",
+      "metric": "pr_auc_tour",
+      "v158": 0.5902590576472103,
+      "v166": 0.6026199969006774,
+      "delta": 0.01236093925346704
+    }
+  ],
+  "shap_8_features": {
+    "bas": {
+      "event_is_vacances_valais": {
+        "rank": 7,
+        "mean_abs_shap": 0.6353760361671448,
+        "pct_total": 2.3545805695240176
+      },
+      "event_is_vacances_fribourg": {
+        "rank": 108,
+        "mean_abs_shap": 0.022287340834736824,
+        "pct_total": 0.08259256989356395
+      },
+      "event_is_vacances_neuchatel": {
+        "rank": 28,
+        "mean_abs_shap": 0.23282673954963684,
+        "pct_total": 0.8628108172228731
+      },
+      "event_is_vacances_geneve": {
+        "rank": 75,
+        "mean_abs_shap": 0.06800122559070587,
+        "pct_total": 0.2519993757485292
+      },
+      "event_is_ferie_valais": {
+        "rank": 116,
+        "mean_abs_shap": 0.014578054659068584,
+        "pct_total": 0.05402344798643338
+      },
+      "event_is_ferie_fribourg": {
+        "rank": 132,
+        "mean_abs_shap": 0.004137502517551184,
+        "pct_total": 0.015332783233297655
+      },
+      "event_is_ferie_neuchatel": {
+        "rank": 121,
+        "mean_abs_shap": 0.008448838256299496,
+        "pct_total": 0.03130975872703627
+      },
+      "event_is_ferie_geneve": {
+        "rank": 138,
+        "mean_abs_shap": 0.0027545886114239693,
+        "pct_total": 0.010207972054811354
+      },
+      "_n_features": 166
+    },
+    "haut": {
+      "event_is_vacances_valais": {
+        "rank": 40,
+        "mean_abs_shap": 0.11870584636926651,
+        "pct_total": 0.6625430832697256
+      },
+      "event_is_vacances_fribourg": {
+        "rank": 81,
+        "mean_abs_shap": 0.047348566353321075,
+        "pct_total": 0.2642705991290795
+      },
+      "event_is_vacances_neuchatel": {
+        "rank": 135,
+        "mean_abs_shap": 0.003008544910699129,
+        "pct_total": 0.016791848777939503
+      },
+      "event_is_vacances_geneve": {
+        "rank": 127,
+        "mean_abs_shap": 0.005155192222446203,
+        "pct_total": 0.028773114841224155
+      },
+      "event_is_ferie_valais": {
+        "rank": 120,
+        "mean_abs_shap": 0.009636767208576202,
+        "pct_total": 0.053786512243559646
+      },
+      "event_is_ferie_fribourg": {
+        "rank": 139,
+        "mean_abs_shap": 0.001648841192945838,
+        "pct_total": 0.00920281823692302
+      },
+      "event_is_ferie_neuchatel": {
+        "rank": 124,
+        "mean_abs_shap": 0.006940542720258236,
+        "pct_total": 0.038737844125558495
+      },
+      "event_is_ferie_geneve": {
+        "rank": 110,
+        "mean_abs_shap": 0.015271300449967384,
+        "pct_total": 0.08523501407155046
+      },
+      "_n_features": 166
+    }
+  },
+  "pr_auc_haut_delta": {
+    "troncon": -0.0021547529855242553,
+    "tour": 0.0015063991377300967
+  },
+  "verdict": "ZONE DE BRUIT (<0.03) — pas de gain reel demontre"
+}

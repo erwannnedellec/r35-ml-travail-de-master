@@ -1,0 +1,23 @@
+{
+  "APC_Global": {
+    "max_depth": 8,
+    "min_child_weight": 10,
+    "n_estimators": 800,
+    "learning_rate": 0.05,
+    "mean_wf_pr_auc": 0.041600541075259775
+  },
+  "APC_Haut": {
+    "max_depth": 4,
+    "min_child_weight": 10,
+    "n_estimators": 500,
+    "learning_rate": 0.05,
+    "mean_wf_pr_auc": 0.05425642452643614
+  },
+  "Enrichi_Haut_Seg": {
+    "max_depth": 4,
+    "min_child_weight": 10,
+    "n_estimators": 300,
+    "learning_rate": 0.1,
+    "mean_wf_pr_auc": 0.11095553091555013
+  }
+}

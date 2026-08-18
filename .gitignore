@@ -1,0 +1,63 @@
+# Environnement Python
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# macOS / IDE
+.DS_Store
+.vscode/
+.idea/
+.claude/
+.env
+
+# =============================================================================
+# DONNÉES — rien de ce qui suit n'entre dans ce dépôt.
+# Les données d'exploitation sont confidentielles et transmises séparément
+# (cf. README, section « Données »). Déposer l'archive ici la laisse ignorée.
+# =============================================================================
+data/*
+!data/README.md
+!data/dimension/
+data/dimension/*
+!data/dimension/annees_horaires.csv
+!data/dimension/gare_abreviation.csv
+!data/dimension/gare_GIL_CLIE.csv
+!data/dimension/dim_gare.csv
+
+# Sorties de la chaîne
+logs/
+*.log
+!archive/explorations/**/*.log
+catboost_info/
+models/_reference/
+.pytest_cache/
+
+# Sorties régénérées par `make reproduce` / `make reproduce-memoire`.
+# Les .gitkeep et les entrées figées listées ensuite restent versionnés : les
+# répertoires doivent exister dans le dépôt, sans quoi les générateurs échouent
+# sur « Cannot save file into a non-existent directory ».
+outputs/confirmation/**
+outputs/entretiens/**
+outputs/couche2/*.json
+outputs/couche2/figures/**
+outputs/codebook_canonique_ba493568.csv
+docs/entretiens/**
+!outputs/confirmation/**/
+!outputs/entretiens/**/
+!outputs/couche2/figures/**/
+!docs/entretiens/**/
+docs/memoire/figures/**/*.png
+docs/memoire/figures/**/*.pdf
+docs/memoire/tableaux/**/*.csv
+docs/memoire/tableaux/**/*.md
+docs/memoire/verifs/**/*.csv
+docs/memoire/verifs/**/*.json
+docs/memoire/verifs/**/*.md
+docs/memoire/verifs/**/*.txt
+!**/.gitkeep
+!outputs/couche2/features_158f_sans_simba.json
+!outputs/experiences/contreverif_h24_simba.json
+!docs/memoire/tableaux/annexe_22/mapping_candidates_colonnes*.csv
+!docs/memoire/verifs/section_4_3_3/verif_433_matriceB_surcharge.csv
+!docs/memoire/verifs/section_4_3_1/annexe_X_catalogue_sources.md

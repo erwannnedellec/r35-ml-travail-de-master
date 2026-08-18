@@ -1,0 +1,242 @@
+{
+  "experiment": "test H25 best-R² (Optuna, HP par segment) vs CF09",
+  "statut": "EXPERIMENTAL hors canonique — aucun modele sauvegarde, hash 416bb90b intact, pas de re-figement",
+  "protocole": "train H22(Gil exclu)+H23+H24 → test H25 (Split C) ; iso sauf HP ; seed42 seuil63 reg:squarederror seg bas/haut",
+  "hp_cf09": {
+    "n_estimators": 300,
+    "max_depth": 6,
+    "learning_rate": 0.1,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 1,
+    "reg_lambda": 1.0,
+    "reg_alpha": 0.0,
+    "gamma": 0.0
+  },
+  "hp_best_r2": {
+    "bas": {
+      "max_depth": 8,
+      "learning_rate": 0.0288692203804957,
+      "n_estimators": 360,
+      "subsample": 0.8186841117373118,
+      "colsample_bytree": 0.6739417822102108,
+      "min_child_weight": 10,
+      "reg_lambda": 3.8756641168055728,
+      "reg_alpha": 1.8789978831283785,
+      "gamma": 4.474136752138244
+    },
+    "haut": {
+      "max_depth": 5,
+      "learning_rate": 0.0773195749531405,
+      "n_estimators": 349,
+      "subsample": 0.6339251403553697,
+      "colsample_bytree": 0.6319605486005216,
+      "min_child_weight": 2,
+      "reg_lambda": 3.436096416502431,
+      "reg_alpha": 0.8245292407460466,
+      "gamma": 3.366293559629718
+    }
+  },
+  "garde_fou_cf09_reproduit_canon": true,
+  "cf09_h25": {
+    "bas": {
+      "n_obs": 229747,
+      "n_gt63": 8392,
+      "r2_global": 0.5868201570605139,
+      "mae_global": 8.169355239485666,
+      "bias_gt63": -26.507214227270467,
+      "mae_gt63": 27.202408980766403,
+      "pr_auc_troncon": 0.468682360770091,
+      "pr_auc_tour": 0.5530535917585301
+    },
+    "haut": {
+      "n_obs": 79505,
+      "n_gt63": 1192,
+      "r2_global": 0.4333585691963404,
+      "mae_global": 6.38913175142802,
+      "bias_gt63": -42.26554917769144,
+      "mae_gt63": 42.40157375519708,
+      "pr_auc_troncon": 0.3451901542137515,
+      "pr_auc_tour": 0.34592694345150315
+    },
+    "global": {
+      "n_obs": 309252,
+      "n_gt63": 9584,
+      "r2_global": 0.6013368502570058,
+      "mae_global": 7.711681017757035,
+      "bias_gt63": -28.467140694392942,
+      "mae_gt63": 29.09278924069142,
+      "pr_auc_troncon": 0.44897336321162107,
+      "pr_auc_tour": 0.5634987603694904
+    }
+  },
+  "best_r2_h25": {
+    "bas": {
+      "n_obs": 229747,
+      "n_gt63": 8392,
+      "r2_global": 0.5910531075832129,
+      "mae_global": 8.130877363496861,
+      "bias_gt63": -27.480998501764013,
+      "mae_gt63": 27.848784116475894,
+      "pr_auc_troncon": 0.4716704657700176,
+      "pr_auc_tour": 0.5564130344371575
+    },
+    "haut": {
+      "n_obs": 79505,
+      "n_gt63": 1192,
+      "r2_global": 0.4387817878844418,
+      "mae_global": 6.212372871538874,
+      "bias_gt63": -44.30366756802037,
+      "mae_gt63": 44.540528086507884,
+      "pr_auc_troncon": 0.3383720896322325,
+      "pr_auc_tour": 0.33688717601421325
+    },
+    "global": {
+      "n_obs": 309252,
+      "n_gt63": 9584,
+      "r2_global": 0.605361441770102,
+      "mae_global": 7.6376527452789675,
+      "bias_gt63": -29.573300414011257,
+      "mae_gt63": 29.924802356488218,
+      "pr_auc_troncon": 0.44951987498600765,
+      "pr_auc_tour": 0.5623017755343976
+    }
+  },
+  "deltas": [
+    {
+      "segment": "bas",
+      "metric": "r2_global",
+      "cf09": 0.5868201570605139,
+      "best_r2": 0.5910531075832129,
+      "delta": 0.004232950522699008
+    },
+    {
+      "segment": "bas",
+      "metric": "mae_global",
+      "cf09": 8.169355239485666,
+      "best_r2": 8.130877363496861,
+      "delta": -0.038477875988805366
+    },
+    {
+      "segment": "bas",
+      "metric": "bias_gt63",
+      "cf09": -26.507214227270467,
+      "best_r2": -27.480998501764013,
+      "delta": -0.9737842744935463
+    },
+    {
+      "segment": "bas",
+      "metric": "mae_gt63",
+      "cf09": 27.202408980766403,
+      "best_r2": 27.848784116475894,
+      "delta": 0.6463751357094907
+    },
+    {
+      "segment": "bas",
+      "metric": "pr_auc_troncon",
+      "cf09": 0.468682360770091,
+      "best_r2": 0.4716704657700176,
+      "delta": 0.0029881049999265774
+    },
+    {
+      "segment": "bas",
+      "metric": "pr_auc_tour",
+      "cf09": 0.5530535917585301,
+      "best_r2": 0.5564130344371575,
+      "delta": 0.0033594426786274223
+    },
+    {
+      "segment": "haut",
+      "metric": "r2_global",
+      "cf09": 0.4333585691963404,
+      "best_r2": 0.4387817878844418,
+      "delta": 0.005423218688101361
+    },
+    {
+      "segment": "haut",
+      "metric": "mae_global",
+      "cf09": 6.38913175142802,
+      "best_r2": 6.212372871538874,
+      "delta": -0.17675887988914596
+    },
+    {
+      "segment": "haut",
+      "metric": "bias_gt63",
+      "cf09": -42.26554917769144,
+      "best_r2": -44.30366756802037,
+      "delta": -2.0381183903289326
+    },
+    {
+      "segment": "haut",
+      "metric": "mae_gt63",
+      "cf09": 42.40157375519708,
+      "best_r2": 44.540528086507884,
+      "delta": 2.1389543313108064
+    },
+    {
+      "segment": "haut",
+      "metric": "pr_auc_troncon",
+      "cf09": 0.3451901542137515,
+      "best_r2": 0.3383720896322325,
+      "delta": -0.006818064581519012
+    },
+    {
+      "segment": "haut",
+      "metric": "pr_auc_tour",
+      "cf09": 0.34592694345150315,
+      "best_r2": 0.33688717601421325,
+      "delta": -0.009039767437289903
+    },
+    {
+      "segment": "global",
+      "metric": "r2_global",
+      "cf09": 0.6013368502570058,
+      "best_r2": 0.605361441770102,
+      "delta": 0.0040245915130961984
+    },
+    {
+      "segment": "global",
+      "metric": "mae_global",
+      "cf09": 7.711681017757035,
+      "best_r2": 7.6376527452789675,
+      "delta": -0.07402827247806787
+    },
+    {
+      "segment": "global",
+      "metric": "bias_gt63",
+      "cf09": -28.467140694392942,
+      "best_r2": -29.573300414011257,
+      "delta": -1.106159719618315
+    },
+    {
+      "segment": "global",
+      "metric": "mae_gt63",
+      "cf09": 29.09278924069142,
+      "best_r2": 29.924802356488218,
+      "delta": 0.8320131157967978
+    },
+    {
+      "segment": "global",
+      "metric": "pr_auc_troncon",
+      "cf09": 0.44897336321162107,
+      "best_r2": 0.44951987498600765,
+      "delta": 0.0005465117743865822
+    },
+    {
+      "segment": "global",
+      "metric": "pr_auc_tour",
+      "cf09": 0.5634987603694904,
+      "best_r2": 0.5623017755343976,
+      "delta": -0.0011969848350927847
+    }
+  ],
+  "critere_adoption": "best-R² adopté ssi aucune dégradation matérielle (R²g Δ<-0.005, biais>63 plus négatif >0.5, PR-AUC tr/tour par segment Δ<-0.005)",
+  "degradations_materielles": [
+    "biais>63 bas -0.97 (plus négatif)",
+    "biais>63 haut -2.04 (plus négatif)",
+    "biais>63 global -1.11 (plus négatif)",
+    "pr_auc_troncon haut -0.0068",
+    "pr_auc_tour haut -0.0090"
+  ],
+  "verdict": "NON-ADOPTION — conserver CF09 (best-R² dégrade au moins une métrique clé sur H25)"
+}

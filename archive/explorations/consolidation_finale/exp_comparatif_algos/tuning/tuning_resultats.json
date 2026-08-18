@@ -1,0 +1,257 @@
+{
+  "script": "tuning_comparatif_algos.py",
+  "objet": "Tuning comparatif Optuna XGB/LGBM/CatBoost segmentés — sélection régresseur couche 1",
+  "hors_canonique": true,
+  "promotion_modele": false,
+  "dataset_hash": "416bb90b",
+  "n_features": 158,
+  "seed": 42,
+  "n_trials_par_algo": 40,
+  "max_trees": 600,
+  "early_stopping_rounds": 40,
+  "architecture": "segmentée (BAS+HAUT, HP partagés par essai, aiguillage spatial_segment) — jamais de global",
+  "verrou_h25": "H25 jamais vu au tuning ; révélé une seule fois sur modèles figés",
+  "validation": "walk-forward 3 plis expanding par date, DANS le train ; RMSE combiné (2 segments réunis), moyenné",
+  "search_spaces": {
+    "xgboost": {
+      "learning_rate": "loguniform[0.01,0.3]",
+      "max_depth": "int[3,10]",
+      "subsample": "unif[0.6,1.0]",
+      "colsample_bytree": "unif[0.6,1.0]",
+      "min_child_weight": "int[1,10]",
+      "reg_lambda": "loguniform[1e-2,10]",
+      "reg_alpha": "loguniform[1e-3,10]",
+      "n_estimators": "<= 600 via early stopping (40)"
+    },
+    "lightgbm": {
+      "learning_rate": "loguniform[0.01,0.3]",
+      "num_leaves": "int[15,255]",
+      "max_depth": "int[3,12]",
+      "subsample": "unif[0.6,1.0] (bagging_freq=1)",
+      "colsample_bytree": "unif[0.6,1.0]",
+      "min_child_samples": "int[5,100]",
+      "reg_lambda": "loguniform[1e-2,10]",
+      "reg_alpha": "loguniform[1e-3,10]",
+      "n_estimators": "<= 600 via early stopping (40)"
+    },
+    "catboost": {
+      "learning_rate": "loguniform[0.01,0.3]",
+      "depth": "int[4,10]",
+      "subsample": "unif[0.6,1.0] (bootstrap Bernoulli)",
+      "rsm": "unif[0.6,1.0]",
+      "min_data_in_leaf": "int[1,100]",
+      "l2_leaf_reg": "loguniform[1,30]",
+      "random_strength": "loguniform[1e-3,10]",
+      "iterations": "<= 600 via early stopping (40)"
+    }
+  },
+  "cv": {
+    "xgboost": {
+      "best_cv_rmse": 10.55055492508985,
+      "cv_folds": [
+        11.511123108286371,
+        10.468398929082088,
+        9.67214273790109
+      ],
+      "cv_std": 0.7530048279728432,
+      "n_bas": 536,
+      "n_haut": 313
+    },
+    "lightgbm": {
+      "best_cv_rmse": 10.494304315338214,
+      "cv_folds": [
+        11.479567885823599,
+        10.399584192868963,
+        9.603760867322078
+      ],
+      "cv_std": 0.7687183788034614,
+      "n_bas": 453,
+      "n_haut": 175
+    },
+    "catboost": {
+      "best_cv_rmse": 10.492809160448182,
+      "cv_folds": [
+        11.508406166728461,
+        10.387408014575946,
+        9.582613300040135
+      ],
+      "cv_std": 0.789726362951242,
+      "n_bas": 440,
+      "n_haut": 276
+    }
+  },
+  "resultats_h25": {
+    "xgboost (Optuna seg)": {
+      "global": {
+        "n_obs": 309252,
+        "n_surch": 9584,
+        "rmse": 11.534076810523509,
+        "r2": 0.6108281142535176,
+        "mae": 7.577610532197499,
+        "mae_gt63": 30.165040984376642,
+        "bias_gt63": -29.825022444502142,
+        "pr_auc_troncon": 0.4563747822694878
+      },
+      "bas": {
+        "n_obs": 229747,
+        "n_surch": 8392,
+        "rmse": 11.855590006645702,
+        "r2": 0.5931019179827711,
+        "mae": 8.116844683836938,
+        "mae_gt63": 27.851684507696373,
+        "bias_gt63": -27.46336972145266,
+        "pr_auc_troncon": 0.4787579698623693
+      },
+      "haut": {
+        "n_obs": 79505,
+        "n_surch": 1192,
+        "rmse": 10.550071149011885,
+        "r2": 0.4639401900615663,
+        "mae": 6.019376098681292,
+        "mae_gt63": 46.45169161550151,
+        "bias_gt63": -46.45169161550151,
+        "pr_auc_troncon": 0.33678589701458983
+      }
+    },
+    "lightgbm (Optuna seg)": {
+      "global": {
+        "n_obs": 309252,
+        "n_surch": 9584,
+        "rmse": 11.458918270713074,
+        "r2": 0.6158834460007477,
+        "mae": 7.490975727607321,
+        "mae_gt63": 28.874147358235984,
+        "bias_gt63": -28.39812021175051,
+        "pr_auc_troncon": 0.46091624303911555
+      },
+      "bas": {
+        "n_obs": 229747,
+        "n_surch": 8392,
+        "rmse": 11.747333899174063,
+        "r2": 0.6004989502341047,
+        "mae": 8.038527031336873,
+        "mae_gt63": 26.533639809374762,
+        "bias_gt63": -25.989997748850826,
+        "pr_auc_troncon": 0.4853006181745759
+      },
+      "haut": {
+        "n_obs": 79505,
+        "n_surch": 1192,
+        "rmse": 10.58138910974422,
+        "r2": 0.46075287161905554,
+        "mae": 5.908707073083043,
+        "mae_gt63": 45.35194882639321,
+        "bias_gt63": -45.35194882639321,
+        "pr_auc_troncon": 0.3330400686631632
+      }
+    },
+    "catboost (Optuna seg)": {
+      "global": {
+        "n_obs": 309252,
+        "n_surch": 9584,
+        "rmse": 11.400002663027722,
+        "r2": 0.619823134342592,
+        "mae": 7.470049390576634,
+        "mae_gt63": 29.40445820784751,
+        "bias_gt63": -29.06283866858253,
+        "pr_auc_troncon": 0.468605737564572
+      },
+      "bas": {
+        "n_obs": 229747,
+        "n_surch": 8392,
+        "rmse": 11.74369848374953,
+        "r2": 0.6007461769773212,
+        "mae": 8.034970403804158,
+        "mae_gt63": 27.111252936829644,
+        "bias_gt63": -26.72280703966699,
+        "pr_auc_troncon": 0.4882895235778548
+      },
+      "haut": {
+        "n_obs": 79505,
+        "n_surch": 1192,
+        "rmse": 10.34282891695933,
+        "r2": 0.48479371420367856,
+        "mae": 5.837587180325913,
+        "mae_gt63": 45.549238941389405,
+        "bias_gt63": -45.537289532558376,
+        "pr_auc_troncon": 0.3712353577233006
+      }
+    },
+    "CF09 canonique (repère)": {
+      "global": {
+        "n_obs": 309252,
+        "n_surch": 9584,
+        "rmse": 11.673878171617371,
+        "r2": 0.6013368502570058,
+        "mae": 7.711681017757035,
+        "mae_gt63": 29.09278924069142,
+        "bias_gt63": -28.467140694392942,
+        "pr_auc_troncon": 0.44897336321162107
+      },
+      "bas": {
+        "n_obs": 229747,
+        "n_surch": 8392,
+        "rmse": 11.946753798503437,
+        "r2": 0.5868201570605139,
+        "mae": 8.169355239485666,
+        "mae_gt63": 27.202408980766403,
+        "bias_gt63": -26.507214227270467,
+        "pr_auc_troncon": 0.468682360770091
+      },
+      "haut": {
+        "n_obs": 79505,
+        "n_surch": 1192,
+        "rmse": 10.846832337068417,
+        "r2": 0.4333585691963404,
+        "mae": 6.38913175142802,
+        "mae_gt63": 42.40157375519708,
+        "bias_gt63": -42.26554917769144,
+        "pr_auc_troncon": 0.3451901542137515
+      }
+    },
+    "Baseline naïve (plancher)": {
+      "global": {
+        "n_obs": 309252,
+        "n_surch": 9584,
+        "rmse": 16.68651644160867,
+        "r2": 0.18546989265002112,
+        "mae": 11.387533647283957,
+        "mae_gt63": 56.01702665161061,
+        "bias_gt63": -56.01702665161061,
+        "pr_auc_troncon": 0.05574691843296068
+      },
+      "bas": {
+        "n_obs": 229747,
+        "n_surch": 8392,
+        "rmse": 17.499717831818312,
+        "r2": 0.11345376258648754,
+        "mae": 12.521629828569512,
+        "mae_gt63": 53.43293437099677,
+        "bias_gt63": -53.43293437099677,
+        "pr_auc_troncon": 0.058102453303957906
+      },
+      "haut": {
+        "n_obs": 79505,
+        "n_surch": 1192,
+        "rmse": 14.074971883807175,
+        "r2": 0.04589198754696455,
+        "mae": 8.110315920577303,
+        "mae_gt63": 74.20973002318057,
+        "bias_gt63": -74.20973002318057,
+        "pr_auc_troncon": 0.02512132684833716
+      }
+    }
+  },
+  "verdict": {
+    "metrique_arbitrage": "RMSE (juge principal, non modifiée a posteriori)",
+    "spread_cv_rmse": 0.05774576464166792,
+    "variabilite_inter_plis_moy": 0.7704831899091822,
+    "spread_h25_rmse": 0.13407414749578628,
+    "meilleur_cv": "catboost",
+    "meilleur_h25": "catboost",
+    "indiscernable": true,
+    "texte": "INDISCERNABLES sur le RMSE (écart inter-algos CV=0.0577 < variabilité inter-plis=0.7705). Le choix relève des critères secondaires (explicabilité, intégration Dataiku, maturité, maîtrise)."
+  },
+  "cf09_source": "q6_predictions_h25_158f_416bb90b.parquet (lecture seule, non ré-entraîné)",
+  "created_at": "2026-07-02T16:10:00"
+}

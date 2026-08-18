@@ -1,0 +1,80 @@
+{
+  "model_id": "enrichi_seg_couche1",
+  "version": "1.9",
+  "created_at": "2026-06-20",
+  "split": {
+    "rule": "Split C",
+    "train": "H22 (sans tronçons Gilamont 8501260) + H23 + H24",
+    "test": "H25",
+    "n_train": 801282,
+    "n_test": 309252,
+    "justification": "Gilamont absent de H23+, topologie obsolète (ADR-CF21)."
+  },
+  "dataset": {
+    "file": "data/processed/ml_dataset.parquet",
+    "hash_sha256_8": "416bb90b",
+    "n_features": 158,
+    "reproductible": "deux make clean && make -> 416bb90b byte-exact (pyarrow 21.0.0)",
+    "corrections_leakage": [
+      "ADR-CF18 cutoff mensuel + clé tronçon (histo_*, vs lag J-2)",
+      "ADR-CF19 STATPOP Z-2 forward-fill causal",
+      "ADR-CF18 amendé : cutoff composé décision T-1 + délai d'ingestion 1 jour",
+      "ADR-CF23 headway sur grille planifiée (annulés/suppléments inclus, retrait filtre ~is_annule)"
+    ],
+    "statent_status": "RETIRÉ (ADR-CF20)"
+  },
+  "models": {
+    "bas": {
+      "file": "models/enrichi_seg/enrichi_seg_bas_416bb90b.json",
+      "hash_sha256_8": "e4ddfccd"
+    },
+    "haut": {
+      "file": "models/enrichi_seg/enrichi_seg_haut_416bb90b.json",
+      "hash_sha256_8": "df6a11c5"
+    }
+  },
+  "hyperparams": "ADR-CF09 (XGBoost MSE, n_estimators=300, max_depth=6, lr=0.1, subsample/colsample=0.8, seed=42)",
+  "seuil_surcharge": 63,
+  "metrics_h25": {
+    "bas": {
+      "n_obs": 229747,
+      "r2": 0.5868201570605139,
+      "r2_ci_lo": 0.5828480660073607,
+      "r2_ci_hi": 0.5908620405183447,
+      "mae": 8.169355239485666,
+      "mae_gt63": 27.202408980766403,
+      "bias_gt63": -26.507214227270467,
+      "pr_auc": 0.468682360770091,
+      "prevalence": 0.03652713637174805,
+      "n_gt63": 8392
+    },
+    "haut": {
+      "n_obs": 79505,
+      "r2": 0.4333585691963404,
+      "r2_ci_lo": 0.4202342523771103,
+      "r2_ci_hi": 0.4449321495600203,
+      "mae": 6.38913175142802,
+      "mae_gt63": 42.40157375519708,
+      "bias_gt63": -42.26554917769144,
+      "pr_auc": 0.3451901542137515,
+      "prevalence": 0.014992767750455946,
+      "n_gt63": 1192
+    },
+    "global": {
+      "n_obs": 309252,
+      "r2": 0.6013368502570057,
+      "r2_ci_lo": 0.5978860826774166,
+      "r2_ci_hi": 0.6046429404694483,
+      "mae": 7.711681017757034,
+      "mae_gt63": 29.09278924069142,
+      "bias_gt63": -28.467140694392942,
+      "pr_auc": 0.44897336321162107,
+      "prevalence": 0.0309909070919509,
+      "n_gt63": 9584
+    }
+  },
+  "supersedes": {
+    "v1.8": "51e459ff (cutoff non composé + headway filtré sur statut réalisé)",
+    "v1.7": "d39d0bd8"
+  }
+}

@@ -1,0 +1,34 @@
+================================================================================
+CHANTIER HYPERPARAMÈTRES — tuning Optuna multi-objectif (VALIDATION H24)
+================================================================================
+
+── 0. Dataset ──  Hash 416bb90b ✓ (lecture seule)
+── 1. Split ──  train(H22_valid+H23)=465,573  valid(H24)=335,709
+
+── 2. Référence HP actuels (ADR-CF09) sur H24 ──
+   bas: R²=0.6170  biais>63=-28.10  PR-AUC_tr=0.4919  MAE>63=28.37  MAEglob=7.506
+  haut: R²=0.5101  biais>63=-43.86  PR-AUC_tr=0.3077  MAE>63=44.40  MAEglob=4.776
+
+── 3.bas Optuna TPE multi-objectif — segment BAS (50 essais) ──
+  Terminé en 677s  |  7 points sur le front de Pareto
+
+── 3.haut Optuna TPE multi-objectif — segment HAUT (50 essais) ──
+  Terminé en 193s  |  6 points sur le front de Pareto
+
+  Trials → tuning_optuna_h24_trials.csv (100 lignes)
+
+── 5. Figures ──
+  Figure → pareto_bas_h24.png
+  Figure → param_importance_bas_R2_h24.png
+  Figure → param_importance_bas_abs_bias_gt63_h24.png
+  Figure → history_bas_h24.png
+  Figure → pareto_haut_h24.png
+  Figure → param_importance_haut_R2_h24.png
+  Figure → param_importance_haut_abs_bias_gt63_h24.png
+  Figure → history_haut_h24.png
+Traceback (most recent call last):
+  File "<racine du depot>/consolidation_finale/exp_hpo/tuning_optuna_h24.py", line 298, in <module>
+    pts = pareto_points(seg)
+  File "<racine du depot>/consolidation_finale/exp_hpo/tuning_optuna_h24.py", line 270, in pareto_points
+    rn = (rs - rs.min()) / (rs.ptp() + 1e-12)
+AttributeError: `ptp` was removed from the ndarray class in NumPy 2.0. Use np.ptp(arr, ...) instead.

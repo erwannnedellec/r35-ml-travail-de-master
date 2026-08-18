@@ -1,0 +1,245 @@
+{
+  "experiment": "Phase C — confirmation H25 event_is_vacances_valais",
+  "statut": "EXPERIMENTAL hors canonique — aucun modele sauvegarde, hash 416bb90b intact, H25 touche une fois (rapport)",
+  "protocole": "train H22(Gilamont exclu)+H23+H24 → test H25 (Split C) ; iso ADR-CF09 seed42 seuil63 reg:squarederror seg bas/haut",
+  "garde_fou_158f_reproduit_canon": true,
+  "canonique_158f": {
+    "bas": {
+      "n_obs": 229747,
+      "n_gt63": 8392,
+      "r2_global": 0.5868201570605139,
+      "mae_global": 8.169355239485666,
+      "bias_gt63": -26.507214227270467,
+      "mae_gt63": 27.202408980766403,
+      "pr_auc_troncon": 0.468682360770091,
+      "pr_auc_tour": 0.5530535917585301
+    },
+    "haut": {
+      "n_obs": 79505,
+      "n_gt63": 1192,
+      "r2_global": 0.4333585691963404,
+      "mae_global": 6.38913175142802,
+      "bias_gt63": -42.26554917769144,
+      "mae_gt63": 42.40157375519708,
+      "pr_auc_troncon": 0.3451901542137515,
+      "pr_auc_tour": 0.34592694345150315
+    },
+    "global": {
+      "n_obs": 309252,
+      "n_gt63": 9584,
+      "r2_global": 0.6013368502570058,
+      "mae_global": 7.711681017757035,
+      "bias_gt63": -28.467140694392942,
+      "mae_gt63": 29.09278924069142,
+      "pr_auc_troncon": 0.44897336321162107,
+      "pr_auc_tour": 0.5634987603694904
+    }
+  },
+  "candidat_159f": {
+    "bas": {
+      "n_obs": 229747,
+      "n_gt63": 8392,
+      "r2_global": 0.5875558154538683,
+      "mae_global": 8.186427593766924,
+      "bias_gt63": -26.461004805775115,
+      "mae_gt63": 27.057923246412987,
+      "pr_auc_troncon": 0.4741397101789197,
+      "pr_auc_tour": 0.5577281623252927
+    },
+    "haut": {
+      "n_obs": 79505,
+      "n_gt63": 1192,
+      "r2_global": 0.4428343171251502,
+      "mae_global": 6.254208023497949,
+      "bias_gt63": -41.21654860365311,
+      "mae_gt63": 41.535965289845564,
+      "pr_auc_troncon": 0.36459974937798456,
+      "pr_auc_tour": 0.35590631381201926
+    },
+    "global": {
+      "n_obs": 309252,
+      "n_gt63": 9584,
+      "r2_global": 0.6033688015876283,
+      "mae_global": 7.68967699252834,
+      "bias_gt63": -28.29621016961804,
+      "mae_gt63": 28.858614619093665,
+      "pr_auc_troncon": 0.4560014474323711,
+      "pr_auc_tour": 0.5640479075946607
+    }
+  },
+  "shap_vacances_valais_h25": {
+    "bas": {
+      "rank": 9,
+      "n_features": 159,
+      "mean_abs_shap": 0.7571825981140137,
+      "pct_total": 2.7284538745880127
+    },
+    "haut": {
+      "rank": 52,
+      "n_features": 159,
+      "mean_abs_shap": 0.1318013072013855,
+      "pct_total": 0.610124945640564
+    }
+  },
+  "deltas": [
+    {
+      "segment": "bas",
+      "metric": "r2_global",
+      "v158": 0.5868201570605139,
+      "v159": 0.5875558154538683,
+      "delta_h25": 0.0007356583933543215,
+      "delta_valid_h24": null
+    },
+    {
+      "segment": "bas",
+      "metric": "mae_global",
+      "v158": 8.169355239485666,
+      "v159": 8.186427593766924,
+      "delta_h25": 0.017072354281257418,
+      "delta_valid_h24": null
+    },
+    {
+      "segment": "bas",
+      "metric": "bias_gt63",
+      "v158": -26.507214227270467,
+      "v159": -26.461004805775115,
+      "delta_h25": 0.04620942149535168,
+      "delta_valid_h24": null
+    },
+    {
+      "segment": "bas",
+      "metric": "mae_gt63",
+      "v158": 27.202408980766403,
+      "v159": 27.057923246412987,
+      "delta_h25": -0.14448573435341672,
+      "delta_valid_h24": null
+    },
+    {
+      "segment": "bas",
+      "metric": "pr_auc_troncon",
+      "v158": 0.468682360770091,
+      "v159": 0.4741397101789197,
+      "delta_h25": 0.005457349408828693,
+      "delta_valid_h24": 0.0191
+    },
+    {
+      "segment": "bas",
+      "metric": "pr_auc_tour",
+      "v158": 0.5530535917585301,
+      "v159": 0.5577281623252927,
+      "delta_h25": 0.00467457056676257,
+      "delta_valid_h24": 0.0122
+    },
+    {
+      "segment": "haut",
+      "metric": "r2_global",
+      "v158": 0.4333585691963404,
+      "v159": 0.4428343171251502,
+      "delta_h25": 0.009475747928809786,
+      "delta_valid_h24": null
+    },
+    {
+      "segment": "haut",
+      "metric": "mae_global",
+      "v158": 6.38913175142802,
+      "v159": 6.254208023497949,
+      "delta_h25": -0.13492372793007146,
+      "delta_valid_h24": null
+    },
+    {
+      "segment": "haut",
+      "metric": "bias_gt63",
+      "v158": -42.26554917769144,
+      "v159": -41.21654860365311,
+      "delta_h25": 1.049000574038331,
+      "delta_valid_h24": null
+    },
+    {
+      "segment": "haut",
+      "metric": "mae_gt63",
+      "v158": 42.40157375519708,
+      "v159": 41.535965289845564,
+      "delta_h25": -0.8656084653515137,
+      "delta_valid_h24": null
+    },
+    {
+      "segment": "haut",
+      "metric": "pr_auc_troncon",
+      "v158": 0.3451901542137515,
+      "v159": 0.36459974937798456,
+      "delta_h25": 0.019409595164233073,
+      "delta_valid_h24": -0.0022
+    },
+    {
+      "segment": "haut",
+      "metric": "pr_auc_tour",
+      "v158": 0.34592694345150315,
+      "v159": 0.35590631381201926,
+      "delta_h25": 0.009979370360516104,
+      "delta_valid_h24": 0.0015
+    },
+    {
+      "segment": "global",
+      "metric": "r2_global",
+      "v158": 0.6013368502570058,
+      "v159": 0.6033688015876283,
+      "delta_h25": 0.0020319513306225057,
+      "delta_valid_h24": null
+    },
+    {
+      "segment": "global",
+      "metric": "mae_global",
+      "v158": 7.711681017757035,
+      "v159": 7.68967699252834,
+      "delta_h25": -0.02200402522869549,
+      "delta_valid_h24": null
+    },
+    {
+      "segment": "global",
+      "metric": "bias_gt63",
+      "v158": -28.467140694392942,
+      "v159": -28.29621016961804,
+      "delta_h25": 0.1709305247749029,
+      "delta_valid_h24": null
+    },
+    {
+      "segment": "global",
+      "metric": "mae_gt63",
+      "v158": 29.09278924069142,
+      "v159": 28.858614619093665,
+      "delta_h25": -0.23417462159775582,
+      "delta_valid_h24": null
+    },
+    {
+      "segment": "global",
+      "metric": "pr_auc_troncon",
+      "v158": 0.44897336321162107,
+      "v159": 0.4560014474323711,
+      "delta_h25": 0.007028084220750019,
+      "delta_valid_h24": null
+    },
+    {
+      "segment": "global",
+      "metric": "pr_auc_tour",
+      "v158": 0.5634987603694904,
+      "v159": 0.5640479075946607,
+      "delta_h25": 0.0005491472251702989,
+      "delta_valid_h24": null
+    }
+  ],
+  "gain_bas_h25": {
+    "pr_auc_troncon": 0.005457349408828693,
+    "pr_auc_tour": 0.00467457056676257
+  },
+  "rappel_valid_h24": {
+    "bas": {
+      "pr_auc_troncon": 0.0191,
+      "pr_auc_tour": 0.0122
+    },
+    "haut": {
+      "pr_auc_troncon": -0.0022,
+      "pr_auc_tour": 0.0015
+    }
+  },
+  "verdict": "Gain BAS PARTIEL / atténué sur H25"
+}
